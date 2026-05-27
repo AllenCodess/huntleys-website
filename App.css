@@ -25,3 +25,30 @@
   font-size: 11px;
   letter-spacing: 0.1rem;
 }
+
+/* Navigation */
+
+.flexed-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation-logo {
+  margin-left: 2rem;
+}
+
+.nav-links {
+  padding: 0 1rem;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.navigation-icons {
+  margin-right: 2rem;
+}
+
+.nav-icon {
+  padding: 0 0.4rem;
+}
