@@ -25,10 +25,10 @@ function Header() {
           </div>
           <div className="navigation-icons">
             <Link to="/signin">
-              <FontAwesomeIcon className="nav-icon" icon={faUser} />
+              <FontAwesomeIcon className="nav-icon" icon={faUser} size="lg" />
             </Link>
             <Link to="/cart">
-              <FontAwesomeIcon className="nav-icon" icon={faCartShopping} />
+              <FontAwesomeIcon className="nav-icon" icon={faCartShopping} size="lg" />
             </Link>
           </div>
         </div>
