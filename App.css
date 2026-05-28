@@ -124,6 +124,45 @@ svg {
   padding-left: 0.5rem;
 }
 
+/* Section */
+
+.section-text {
+  color: white;
+  border: white solid 2px;
+}
+
+.section-flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-flex-item {
+  border: greenyellow solid 3px;
+  position: relative;
+}
+
+.section-text-container {
+  position: absolute;
+  z-index: 2;
+}
+
+.section-img {
+  width: 30%;
+  border: red solid 3px;
+}
+
+.section-header {
+  font-family: "Stack Sans Headline", sans-serif;
+}
+
+.circle-icon {
+  padding: 10px;
+  border-radius: 50%;
+  width: 10%;
+  height: 10%;
+  border: white solid 1px;
+}
 /* Media Queries */
 
 @media (max-width: 1092px) {
@@ -213,7 +252,6 @@ svg {
   }
   .hero-text-container {
     width: 60%;
-    border: red 2px solid;
   }
 }
 
