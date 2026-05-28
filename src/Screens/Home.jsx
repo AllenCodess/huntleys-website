@@ -12,9 +12,15 @@ const HomeScreen = () => {
             alt=""
           />
           <div className="hero-text-container">
-            <h3>Premium Sauces & Dips</h3>
-            <h1>BOLD FLAVOUR.</h1>
-            <h1>MADE FOR MORE.</h1>
+            <h3 className="hero-section-font-one">Premium Sauces & Dips</h3>
+            <h1 className="hero-section-font-two">BOLD FLAVOUR.</h1>
+            <h1 className="hero-section-font-two">
+              MADE FOR <strong className="hero-more">MORE.</strong>
+            </h1>
+            <p className="hero-description">
+              Huntley's Sauces are handcrafted in small batches using the finest ingredients for
+              flavour that takes every dish to the next level.
+            </p>
           </div>
         </div>
       </div>
