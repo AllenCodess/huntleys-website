@@ -61,3 +61,15 @@
   object-fit: contain;
   margin: 0px 0px 0px 199px;
 }
+
+.img-container {
+  position: relative;
+  border: red solid 7px;
+}
+
+.hero-text-container {
+  position: absolute;
+  left: 100px;
+  top: 50px;
+  border: blue solid 7px;
+}
