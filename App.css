@@ -3,7 +3,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: white;
 }
 
 .container {
@@ -17,12 +16,14 @@
 
 .logo-name {
   font-weight: 100;
+  color: white;
 }
 
 .secondary-name {
   margin-left: 2rem;
   font-size: 11px;
   letter-spacing: 0.1rem;
+  color: white;
 }
 
 /* Navigation */
@@ -45,6 +46,7 @@
   font-family: "Stack Sans Headline", sans-serif;
   font-weight: 600;
   text-decoration: none;
+  color: white;
 }
 
 .navigation-icons {
@@ -53,6 +55,7 @@
 
 .nav-icon {
   padding: 0 0.4rem;
+  color: white;
 }
 
 /* Hero Section */
@@ -74,6 +77,7 @@
   left: 100px;
   top: 50px;
   width: 505px;
+  color: white;
 }
 
 .hero-section-font-one {
@@ -99,4 +103,21 @@
   margin-top: 1rem;
   line-height: 28px;
   font-family: "Stack Sans Headline", sans-serif;
+}
+
+.hero-btn {
+  margin-top: 1rem;
+  color: black;
+  padding: 0.8rem 0.4rem;
+  font-weight: 700;
+  background-color: #ffc04b;
+}
+
+svg {
+  color: white;
+}
+
+.btn-arrow {
+  color: black;
+  padding-left: 0.5rem;
 }
