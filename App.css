@@ -134,8 +134,7 @@ svg {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin-top: -5rem;
-  margin-left: 1rem;
+  margin-top: -3rem;
 }
 
 .section-flex-item {
@@ -146,6 +145,7 @@ svg {
   position: absolute;
   z-index: 2;
   margin: 1rem 1rem;
+  width: 90%;
 }
 
 .section-header {
@@ -160,8 +160,9 @@ svg {
 }
 
 .section-img {
-  width: 95%;
+  width: 100%;
   border: gray solid 3px;
+  position: relative;
 }
 
 .section-header {
@@ -174,6 +175,14 @@ svg {
   width: 10%;
   height: 10%;
   border: white solid 1px;
+}
+
+.section-btn {
+  margin-top: 0.8rem;
+  color: black;
+  padding: 0.8rem 0.4rem;
+  font-weight: 700;
+  background-color: #ffc04b;
 }
 /* Media Queries */
 
@@ -220,6 +229,41 @@ svg {
   .hero-text-container {
     width: 45%;
   }
+
+  .section-flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .section-header {
+    font-size: 72px;
+    margin-bottom: 0.4rem;
+  }
+
+  .section-description {
+    font-size: 40px;
+    font-family: "Stack Sans Headline", sans-serif;
+    width: 60%;
+  }
+
+  .section-btn {
+    margin-top: 0.8rem;
+    color: black;
+    padding: 0.8rem 0.4rem;
+    font-weight: 700;
+    background-color: #ffc04b;
+    font-size: 30px;
+  }
+
+  .section-text-container {
+    position: absolute;
+    z-index: 2;
+    margin: 1rem 1rem;
+  }
 }
 
 @media (max-width: 800px) {
@@ -265,6 +309,26 @@ svg {
   .hero-text-container {
     width: 60%;
   }
+
+  .section-header {
+    font-size: 50px;
+    margin-bottom: 0.4rem;
+  }
+
+  .section-description {
+    font-size: 24px;
+    font-family: "Stack Sans Headline", sans-serif;
+    width: 60%;
+  }
+
+  .section-btn {
+    margin-top: 0.8rem;
+    color: black;
+    padding: 0.8rem 0.4rem;
+    font-weight: 700;
+    background-color: #ffc04b;
+    font-size: 24px;
+  }
 }
 
 @media (max-width: 664px) {
@@ -309,5 +373,25 @@ svg {
   }
   .hero-text-container {
     width: 55%;
+  }
+
+  .section-header {
+    font-size: 24px;
+    margin-bottom: 0.4rem;
+  }
+
+  .section-description {
+    font-size: 16px;
+    font-family: "Stack Sans Headline", sans-serif;
+    width: 60%;
+  }
+
+  .section-btn {
+    margin-top: 0.8rem;
+    color: black;
+    padding: 0.8rem 0.4rem;
+    font-weight: 700;
+    background-color: #ffc04b;
+    font-size: 16px;
   }
 }

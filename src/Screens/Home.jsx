@@ -2,6 +2,7 @@ import Header from "../components/Header";
 import HeroSection from "../components/HeroSection";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faStar } from "@fortawesome/free-regular-svg-icons";
+import { Link } from "react-router";
 
 const HomeScreen = () => {
   return (
@@ -15,7 +16,9 @@ const HomeScreen = () => {
               <FontAwesomeIcon className=" circle-icon" icon={faStar} size="lg" />
               <h2 className="section-header">SAUCES</h2>
               <p className="section-description">Bold flavours for every occasion.</p>
-              <button className="hero-btn">SHOP SAUCES</button>
+              <Link to={"/products"}>
+                <button className="section-btn">SHOP SAUCES</button>
+              </Link>
             </div>
 
             <img
@@ -31,7 +34,9 @@ const HomeScreen = () => {
               <p className="section-description">
                 Sign in to your account to track orders, save favorites, and more.
               </p>
-              <button className="hero-btn">SIGN IN</button>
+              <Link to={"/signin"}>
+                <button className="section-btn">SIGN IN</button>
+              </Link>
             </div>
 
             <img
@@ -45,7 +50,7 @@ const HomeScreen = () => {
               <FontAwesomeIcon className=" circle-icon" icon={faStar} size="lg" />
               <h2 className="section-header">FEATURED</h2>
               <p className="section-description">Check out our featured sauce.</p>
-              <button className="hero-btn">VIEW FEATURED</button>
+              <button className="section-btn">VIEW FEATURED</button>
             </div>
 
             <img

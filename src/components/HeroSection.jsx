@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router";
 
 const HeroSection = () => {
   return (
@@ -16,10 +17,12 @@ const HeroSection = () => {
             Huntley's Sauces are handcrafted in small batches using the finest ingredients for
             flavour that takes every dish to the next level.
           </p>
-          <button className="hero-btn">
-            SHOP SAUCES
-            <FontAwesomeIcon className="btn-arrow" icon={faArrowRight} size="lg" color="black" />
-          </button>
+          <Link to={"/products"}>
+            <button className="hero-btn">
+              SHOP SAUCES
+              <FontAwesomeIcon className="btn-arrow" icon={faArrowRight} size="lg" color="black" />
+            </button>
+          </Link>
         </div>
       </div>
     </div>
