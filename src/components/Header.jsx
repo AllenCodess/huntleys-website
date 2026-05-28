@@ -2,8 +2,12 @@ import React from "react";
 import { Link } from "react-router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faCartShopping } from "@fortawesome/free-solid-svg-icons";
+import Hamburger from "hamburger-react";
+import { useState } from "react";
 
 function Header() {
+  const [isOpen, setOpen] = useState(false);
+
   return (
     <>
       <div className="container">
@@ -30,6 +34,9 @@ function Header() {
             <Link to="/cart">
               <FontAwesomeIcon className="nav-icon" icon={faCartShopping} size="lg" />
             </Link>
+            <div className="hamburger">
+              <Hamburger toggled={isOpen} toggle={setOpen} color="white" />
+            </div>
           </div>
         </div>
       </div>

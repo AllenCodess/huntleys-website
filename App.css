@@ -58,6 +58,12 @@
   color: white;
 }
 
+/* Hamburger Menu */
+
+.hamburger {
+  display: none;
+}
+
 /* Hero Section */
 
 .hero-img {
@@ -120,4 +126,20 @@ svg {
 .btn-arrow {
   color: black;
   padding-left: 0.5rem;
+}
+
+/* Media Queries */
+
+@media (max-width: 800px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-icon {
+    display: none;
+  }
 }
