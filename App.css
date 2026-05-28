@@ -40,7 +40,8 @@
   margin-left: 2rem;
 }
 
-.nav-links {
+.nav-links,
+.navIconText {
   padding: 0 1rem;
   font-size: 16px;
   font-family: "Stack Sans Headline", sans-serif;
@@ -49,12 +50,7 @@
   color: white;
 }
 
-.navigation-icons {
-  margin-right: 2rem;
-}
-
 .nav-icon {
-  padding: 0 0.8rem;
   color: white;
 }
 
@@ -135,11 +131,24 @@ svg {
     display: block;
   }
 
-  .nav-links {
+  .navigation-links {
     display: none;
   }
 
-  .nav-icon {
-    display: none;
+  .navigation-links.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    padding: 1rem 2rem;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .navIconText {
+    margin: 0 auto;
   }
 }

@@ -16,7 +16,7 @@ function Header() {
             <h1 className="logo-name">Huntley's</h1>
             <h4 className="secondary-name">SAUCES</h4>
           </div>
-          <div className="navigation-links">
+          <div className={`navigation-links ${isOpen ? "open" : ""}`}>
             <Link className="nav-links" to="/products">
               SHOP ALL
             </Link>
@@ -26,17 +26,15 @@ function Header() {
             <Link className="nav-links" to="/contact">
               CONTACT
             </Link>
+            <Link className="navIconText" to="/signin">
+              SIGN IN <FontAwesomeIcon className="nav-icon" icon={faUser} size="s" />
+            </Link>
+            <Link className="navIconText" to="/cart">
+              CART <FontAwesomeIcon className="nav-icon" icon={faCartShopping} size="s" />
+            </Link>
           </div>
-          <div className="navigation-icons">
-            <Link to="/signin">
-              <FontAwesomeIcon className="nav-icon" icon={faUser} size="lg" />
-            </Link>
-            <Link to="/cart">
-              <FontAwesomeIcon className="nav-icon" icon={faCartShopping} size="lg" />
-            </Link>
-            <div className="hamburger">
-              <Hamburger toggled={isOpen} toggle={setOpen} color="white" />
-            </div>
+          <div className="hamburger">
+            <Hamburger toggled={isOpen} toggle={setOpen} color="white" />
           </div>
         </div>
       </div>
