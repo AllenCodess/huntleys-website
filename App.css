@@ -215,11 +215,13 @@ svg {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 17px;
 }
 
 .sauce-collection-item {
   background-color: white;
+
+  height: 363px;
   text-align: center;
   width: 15%;
 }

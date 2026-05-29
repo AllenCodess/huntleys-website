@@ -50,7 +50,7 @@ const HomeScreen = () => {
               src="public/images/LandingPage-Images/Jars/BBQandHoneyMustard.png"
               alt=""
             />
-            <p className="sauce-name">BBQ & Honey Mustard Sauce</p>
+            <p className="sauce-name">BBQ & Honey Mustard </p>
             <p className="collection-price">$5.99</p>
             <button className="collection-btn"> ADD TO CART</button>
           </div>
@@ -60,7 +60,7 @@ const HomeScreen = () => {
               src="public/images/LandingPage-Images/Jars/BlazinBlueCheese.png"
               alt=""
             />
-            <p className="sauce-name">Blazin' Blue Cheese Sauce</p>
+            <p className="sauce-name">Blazin' Blue Cheese </p>
             <p className="collection-price">$5.99</p>
             <button className="collection-btn"> ADD TO CART</button>
           </div>
