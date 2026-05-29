@@ -190,7 +190,7 @@ svg {
 .collection-container {
   max-width: 1300px;
   margin: 0 auto;
-  padding: 1.4rem 0;
+  padding-bottom: 0.8rem;
   background-color: black;
 }
 
@@ -263,8 +263,31 @@ svg {
 .third-section-container {
   max-width: 1300px;
   margin: 0 auto;
-
   background-color: black;
+}
+
+.img-container-third-section {
+  position: relative;
+}
+
+.third-section-header {
+  position: absolute;
+  top: 10px;
+  left: 550px;
+  color: white;
+}
+
+.third-section-title-header {
+  font-family: "Tangerine", cursive;
+  font-size: 40px;
+  font-weight: 100;
+  color: #ffc04b;
+}
+
+.third-section-subheader {
+  font-family: "Stack Sans Headline", sans-serif;
+  font-size: 35px;
+  width: 70%;
 }
 /* Media Queries */
 
