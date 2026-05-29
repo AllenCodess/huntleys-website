@@ -4,7 +4,7 @@ const ThirdSection = () => {
       <div className="img-container-third-section">
         <img
           className="third-section-img"
-          src="public/images/LandingPage-Images/above-footer-img.png"
+          src="/images/LandingPage-Images/above-footer-img.png"
           alt=""
         />
         <div className="third-section-header">

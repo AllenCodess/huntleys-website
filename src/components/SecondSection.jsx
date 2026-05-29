@@ -9,7 +9,7 @@ const SecondSection = () => {
         <div className="sauce-collection-item">
           <img
             className="collection-image"
-            src="public/images/LandingPage-Images/Jars/seafoodDippinV2.png"
+            src="/images/LandingPage-Images/Jars/seafoodDippinV2.png"
             alt=""
           />
           <p className="sauce-name">Seafood Dippin' Sauce</p>
@@ -19,7 +19,7 @@ const SecondSection = () => {
         <div className="sauce-collection-item">
           <img
             className="collection-image"
-            src="public/images/LandingPage-Images/Jars/cockTailSauce.png"
+            src="/images/LandingPage-Images/Jars/cockTailSauce.png"
             alt=""
           />
           <p className="sauce-name">CockTail Sauce</p>
@@ -29,7 +29,7 @@ const SecondSection = () => {
         <div className="sauce-collection-item">
           <img
             className="collection-image"
-            src="public/images/LandingPage-Images/Jars/TartarSauce.png"
+            src="/images/LandingPage-Images/Jars/TartarSauce.png"
             alt=""
           />
           <p className="sauce-name">Spicy Tartar Sauce</p>
@@ -39,7 +39,7 @@ const SecondSection = () => {
         <div className="sauce-collection-item">
           <img
             className="collection-image"
-            src="public/images/LandingPage-Images/Jars/BBQandHoneyMustard.png"
+            src="/images/LandingPage-Images/Jars/BBQandHoneyMustard.png"
             alt=""
           />
           <p className="sauce-name">BBQ & Honey Mustard </p>
@@ -49,7 +49,7 @@ const SecondSection = () => {
         <div className="sauce-collection-item">
           <img
             className="collection-image"
-            src="public/images/LandingPage-Images/Jars/BlazinBlueCheese.png"
+            src="/images/LandingPage-Images/Jars/BlazinBlueCheese.png"
             alt=""
           />
           <p className="sauce-name">Blazin' Blue Cheese </p>
@@ -59,7 +59,7 @@ const SecondSection = () => {
         <div className="sauce-collection-item">
           <img
             className="collection-image"
-            src="public/images/LandingPage-Images/Jars/BlazinRanch.png"
+            src="/images/LandingPage-Images/Jars/BlazinRanch.png"
             alt=""
           />
           <p className="sauce-name">Blazin' Ranch Sauce</p>

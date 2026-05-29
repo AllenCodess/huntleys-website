@@ -12,7 +12,13 @@ const HomeScreen = () => {
       <FirstSection />
       <SecondSection />
       <ThirdSection />
-      <footer></footer>
+      <footer>
+        <div className="footer-container container">
+          <h1 className="logo-name">Huntley's</h1>
+          <h4 className="secondary-name">SAUCES</h4>
+          <h5 className="footer-description"> Makes all food complete.</h5>
+        </div>
+      </footer>
     </>
   );
 };

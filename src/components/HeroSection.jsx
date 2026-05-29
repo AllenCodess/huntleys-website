@@ -6,7 +6,7 @@ const HeroSection = () => {
   return (
     <div className="hero-container container">
       <div className="img-container">
-        <img className="hero-img" src="/public/images/LandingPage-Images/herov2.png" alt="" />
+        <img className="hero-img" src="/images/LandingPage-Images/herov2.png" alt="" />
         <div className="hero-text-container">
           <h3 className="hero-section-font-one">Premium Sauces & Dips</h3>
           <h1 className="hero-section-font-two">BOLD FLAVOUR.</h1>

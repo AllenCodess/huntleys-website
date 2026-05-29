@@ -289,6 +289,13 @@ svg {
   font-size: 35px;
   width: 70%;
 }
+
+/* Footer */
+
+.footer-description {
+  color: rgb(128, 128, 128);
+  font-family: "Stack Sans Headline", sans-serif;
+}
 /* Media Queries */
 
 @media (max-width: 1092px) {
