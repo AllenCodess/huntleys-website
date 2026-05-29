@@ -391,6 +391,20 @@ svg {
   .collection-price {
     font-size: 24px;
   }
+
+  .third-section-header {
+    top: 10px;
+    left: 400px;
+  }
+
+  .third-section-title-header {
+    font-size: 30px;
+  }
+
+  .third-section-subheader {
+    font-size: 30px;
+    width: 70%;
+  }
 }
 
 @media (max-width: 800px) {
@@ -455,6 +469,20 @@ svg {
     font-weight: 700;
     background-color: #ffc04b;
     font-size: 24px;
+  }
+
+  .third-section-header {
+    top: 20px;
+    left: 300px;
+  }
+
+  .third-section-title-header {
+    font-size: 25px;
+  }
+
+  .third-section-subheader {
+    font-size: 25px;
+    width: 70%;
   }
 }
 
@@ -521,5 +549,33 @@ svg {
     font-weight: 700;
     background-color: #ffc04b;
     font-size: 16px;
+  }
+
+  .third-section-header {
+    top: 20px;
+    left: 250px;
+  }
+
+  .third-section-title-header {
+    font-size: 22px;
+  }
+
+  .third-section-subheader {
+    font-size: 23px;
+  }
+}
+
+@media (max-width: 508px) {
+  .third-section-header {
+    left: 150px;
+  }
+
+  .third-section-title-header {
+    font-size: 20px;
+  }
+
+  .third-section-subheader {
+    font-size: 20px;
+    width: 80%;
   }
 }
