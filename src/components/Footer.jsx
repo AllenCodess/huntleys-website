@@ -3,6 +3,7 @@ import { faInstagram, faFacebookSquare } from "@fortawesome/free-brands-svg-icon
 import { Link } from "react-router";
 
 const Footer = () => {
+  const year = new Date().getFullYear();
   return (
     <footer>
       <div className="footer-container container">
@@ -35,6 +36,7 @@ const Footer = () => {
           </Link>
         </div>
       </div>
+      <p className="copyright container">Copyright © {year} Huntley's INC</p>
     </footer>
   );
 };

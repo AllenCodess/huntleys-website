@@ -296,7 +296,6 @@ svg {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border: 2px yellowgreen solid;
   color: white;
 }
 
@@ -314,6 +313,13 @@ svg {
   text-decoration: none;
   color: white;
   font-family: "Stack Sans Headline", sans-serif;
+}
+
+.copyright {
+  color: rgb(128, 128, 128);
+  font-family: "Stack Sans Headline", sans-serif;
+  text-align: center;
+  font-size: 12px;
 }
 /* Media Queries */
 
