@@ -15,12 +15,12 @@ const Footer = () => {
         <div className="footer-socials">
           <h3 className="footer-header">Follow Us</h3>
           <Link to={"https://www.instagram.com/huntleysinc/"}>
-            <FontAwesomeIcon icon={faInstagram} size="xl" />
+            <FontAwesomeIcon className="footer-icon" icon={faInstagram} size="xl" />
           </Link>
           <Link
             to={"https://www.facebook.com/people/Huntleys-Seafood-Dippin-Sauce/100057752495962/#"}
           >
-            <FontAwesomeIcon icon={faFacebookSquare} size="xl" />
+            <FontAwesomeIcon className="footer-icon" icon={faFacebookSquare} size="xl" />
           </Link>
         </div>
         <div className="footer-shop">

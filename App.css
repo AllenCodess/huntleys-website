@@ -595,6 +595,28 @@ svg {
   .third-section-subheader {
     font-size: 23px;
   }
+
+  .footer-header {
+    font-family: "Stack Sans Headline", sans-serif;
+    font-size: 12px;
+  }
+
+  .footer-description {
+    color: rgb(128, 128, 128);
+    font-family: "Stack Sans Headline", sans-serif;
+    font-size: 10px;
+  }
+
+  .footer-links {
+    text-decoration: none;
+    color: white;
+    font-family: "Stack Sans Headline", sans-serif;
+    font-size: 10px;
+  }
+
+  .footer-icon {
+    font-size: 20px;
+  }
 }
 
 @media (max-width: 508px) {
