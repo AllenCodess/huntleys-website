@@ -251,6 +251,21 @@ svg {
   background-color: #ffc04b;
   margin-bottom: 1rem;
 }
+
+/* Third section */
+
+.third-section-img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.third-section-container {
+  max-width: 1300px;
+  margin: 0 auto;
+
+  background-color: black;
+}
 /* Media Queries */
 
 @media (max-width: 1092px) {
