@@ -12,10 +12,12 @@ function Header() {
     <>
       <div className="container">
         <div className="flexed-navigation">
-          <div className="navigation-logo">
-            <h1 className="logo-name">Huntley's</h1>
-            <h4 className="secondary-name">SAUCES</h4>
-          </div>
+          <Link className="nav-logo-link" to={"/"}>
+            <div className="navigation-logo">
+              <h1 className="logo-name">Huntley's</h1>
+              <h4 className="secondary-name">SAUCES</h4>
+            </div>
+          </Link>
           <div className={`navigation-links ${isOpen ? "open" : ""}`}>
             <Link className="nav-links" to="/products">
               SHOP ALL
