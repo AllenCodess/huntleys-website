@@ -229,6 +229,8 @@ svg {
 .sauce-name {
   font-family: "Stack Sans Headline", sans-serif;
   margin-top: -1rem;
+  font-weight: 600;
+  font-size: 18px;
 }
 
 .collection-price {
@@ -328,6 +330,28 @@ svg {
     position: absolute;
     z-index: 2;
     margin: 1rem 1rem;
+  }
+
+  .sauce-collection-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .sauce-collection-item {
+    height: 100%;
+
+    width: 70%;
+  }
+
+  .sauce-name {
+    font-size: 24px;
+  }
+
+  .collection-price {
+    font-size: 24px;
   }
 }
 
@@ -429,6 +453,7 @@ svg {
 
   .hero-section-font-two {
     font-size: 40px;
+    line-height: 3rem;
   }
 
   .hero-description {
@@ -437,7 +462,7 @@ svg {
     margin-top: 0.3rem;
   }
   .hero-text-container {
-    width: 55%;
+    width: 65%;
   }
 
   .section-header {
