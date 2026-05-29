@@ -1,63 +1,78 @@
 import Header from "../components/Header";
 import HeroSection from "../components/HeroSection";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser, faStar } from "@fortawesome/free-regular-svg-icons";
-import { Link } from "react-router";
+import FirstSection from "../components/FirstSection";
 
 const HomeScreen = () => {
   return (
     <>
       <Header />
       <HeroSection />
-      <section className="container section-text">
-        <div className="section-flex-container">
-          <div className="section-flex-item">
-            <div className="section-text-container">
-              <FontAwesomeIcon className=" circle-icon" icon={faStar} size="lg" />
-              <h2 className="section-header">SAUCES</h2>
-              <p className="section-description">Bold flavours for every occasion.</p>
-              <Link to={"/products"}>
-                <button className="section-btn">SHOP SAUCES</button>
-              </Link>
-            </div>
-
+      <FirstSection />
+      <section className="collection collection-container">
+        <div className="collection-header">
+          <h3 className="collection-title">Our Collection</h3>
+          <h2 className="collection-subtitle"> SHOP OUR SAUCES</h2>
+        </div>
+        <div className="sauce-collection-container">
+          <div className="sauce-collection-item">
             <img
-              className="section-img"
-              src="../public/images/LandingPage-Images/sauce.png"
+              className="collection-image"
+              src="public/images/LandingPage-Images/Jars/seafoodDippinV2.png"
               alt=""
             />
+            <p className="sauce-name">Seafood Dippin' Sauce</p>
+            <p className="collection-price">$5.99</p>
+            <button className="collection-btn"> ADD TO CART</button>
           </div>
-          <div className="section-flex-item">
-            <div className="section-text-container">
-              <FontAwesomeIcon className=" circle-icon" icon={faStar} size="lg" />
-              <h2 className="section-header">SIGN IN</h2>
-              <p className="section-description">
-                Sign in to your account to track orders, save favorites, and more.
-              </p>
-              <Link to={"/signin"}>
-                <button className="section-btn">SIGN IN</button>
-              </Link>
-            </div>
-
+          <div className="sauce-collection-item">
             <img
-              className="section-img"
-              src="../public/images/LandingPage-Images/signin-img.png"
+              className="collection-image"
+              src="public/images/LandingPage-Images/Jars/cockTailSauce.png"
               alt=""
             />
+            <p className="sauce-name">CockTail Sauce</p>
+            <p className="collection-price">$5.99</p>
+            <button className="collection-btn"> ADD TO CART</button>
           </div>
-          <div className="section-flex-item">
-            <div className="section-text-container">
-              <FontAwesomeIcon className=" circle-icon" icon={faStar} size="lg" />
-              <h2 className="section-header">FEATURED</h2>
-              <p className="section-description">Check out our featured sauce.</p>
-              <button className="section-btn">VIEW FEATURED</button>
-            </div>
-
+          <div className="sauce-collection-item">
             <img
-              className="section-img"
-              src="../public/images/LandingPage-Images/bundles.png"
+              className="collection-image"
+              src="public/images/LandingPage-Images/Jars/TartarSauce.png"
               alt=""
             />
+            <p className="sauce-name">Spicy Tartar Sauce</p>
+            <p className="collection-price">$5.99</p>
+            <button className="collection-btn"> ADD TO CART</button>
+          </div>
+          <div className="sauce-collection-item">
+            <img
+              className="collection-image"
+              src="public/images/LandingPage-Images/Jars/BBQandHoneyMustard.png"
+              alt=""
+            />
+            <p className="sauce-name">BBQ & Honey Mustard Sauce</p>
+            <p className="collection-price">$5.99</p>
+            <button className="collection-btn"> ADD TO CART</button>
+          </div>
+          <div className="sauce-collection-item">
+            <img
+              className="collection-image"
+              src="public/images/LandingPage-Images/Jars/BlazinBlueCheese.png"
+              alt=""
+            />
+            <p className="sauce-name">Blazin' Blue Cheese Sauce</p>
+            <p className="collection-price">$5.99</p>
+            <button className="collection-btn"> ADD TO CART</button>
+          </div>
+          <div className="sauce-collection-item">
+            <img
+              className="collection-image"
+              src="public/images/LandingPage-Images/Jars/BlazinRanch.png"
+              alt=""
+            />
+            <p className="sauce-name">Blazin' Ranch Sauce</p>
+            <p className="collection-price">$5.99</p>
+            <button className="collection-btn"> ADD TO CART</button>
           </div>
         </div>
       </section>

@@ -161,7 +161,7 @@ svg {
 
 .section-img {
   width: 100%;
-  border: gray solid 3px;
+  border: gray solid 1px;
   position: relative;
 }
 
@@ -183,6 +183,69 @@ svg {
   padding: 0.8rem 0.4rem;
   font-weight: 700;
   background-color: #ffc04b;
+}
+
+/* Collection Section */
+
+.collection-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 1.4rem 0;
+  background-color: black;
+}
+
+.collection-title {
+  font-family: "Tangerine", cursive;
+  font-size: 40px;
+  font-weight: 100;
+  color: #ffc04b;
+}
+
+.collection-header {
+  color: white;
+  text-align: center;
+}
+
+.collection-subtitle {
+  font-family: "Stack Sans Headline", sans-serif;
+  font-size: 35px;
+}
+
+.sauce-collection-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.sauce-collection-item {
+  background-color: white;
+  text-align: center;
+  width: 15%;
+}
+
+.sauce-name {
+  font-family: "Stack Sans Headline", sans-serif;
+  margin-top: -1rem;
+}
+
+.collection-price {
+  color: black;
+  font-family: "Stack Sans Headline", sans-serif;
+  text-align: center;
+}
+
+.collection-image {
+  width: 100%;
+}
+
+.collection-btn {
+  margin-top: 0.8rem;
+  color: black;
+  padding: 0.8rem 0.4rem;
+  font-weight: 700;
+  background-color: #ffc04b;
+  margin-bottom: 1rem;
 }
 /* Media Queries */
 
