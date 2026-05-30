@@ -176,6 +176,61 @@ strong {
   height: 450px;
 }
 
+.about-hero-name {
+  font-family: "Allura", cursive;
+  font-weight: 100;
+  color: #ffc04b;
+  font-size: 30px;
+}
+
+.about-hero-text-container {
+  position: absolute;
+  left: 1100px;
+  top: 60px;
+  text-align: center;
+}
+
+.about-hero-last-name {
+  font-family: "Stack Sans Headline", sans-serif;
+  color: white;
+  font-size: 30px;
+}
+
+.about-hero-title {
+  color: white;
+  font-family: "Stack Sans Headline", sans-serif;
+}
+
+.about-hero-all-food {
+  color: white;
+  font-family: "Stack Sans Headline", sans-serif;
+}
+
+.about-food-text {
+  color: #ffc04b;
+  font-family: "Allura", cursive;
+  font-size: 29px;
+}
+
+.circle-container {
+  border: red 4px solid;
+}
+
+.circle {
+  width: 120px;
+  height: 120px;
+  border: 1px solid #ffc04b;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: absolute;
+  left: 10px;
+  top: 140px;
+  flex-direction: column;
+}
+
 /* Section */
 
 .section-text {
