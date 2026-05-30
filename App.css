@@ -400,7 +400,13 @@ strong {
 /* About Page MEET TIFFANY SECTION */
 
 .meet-tiffany-section {
-  background-color: blanchedalmond;
+  background-color: #eae4d8;
+  font-size: 24px;
+  padding: 2rem;
+}
+
+.meet-tiffany-header {
+  font-family: "Stack Sans Headline", sans-serif;
 }
 
 /* Footer */
