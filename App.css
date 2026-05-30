@@ -403,10 +403,43 @@ strong {
   background-color: #eae4d8;
   font-size: 24px;
   padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.meet-tiffany-text-container {
+  flex: 2;
 }
 
 .meet-tiffany-header {
   font-family: "Stack Sans Headline", sans-serif;
+}
+
+.meet-tiffany-description,
+.meet-tiffany-description2 {
+  font-size: 16px;
+  line-height: 1.5rem;
+  width: 85%;
+}
+
+.meet-tiffany-description {
+  margin: 1rem 0;
+}
+
+.tgbtg {
+  font-family: "Birthstone", cursive;
+  color: #ffc04b;
+  font-size: 40px;
+  font-weight: 400;
+  margin-top: 2rem;
+}
+
+.meet-tiffany-img-container {
+  flex: 1;
+}
+
+.meet-tiffany-img {
+  width: 100%;
 }
 
 /* Footer */

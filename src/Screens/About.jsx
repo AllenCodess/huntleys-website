@@ -24,9 +24,11 @@ const About = () => {
             constant encouragement, strength, and support. Their contributions have helped her
             pursue and fulfill the vision that God has placed on her heart.
           </p>
-          <p className="tgbtg">tGbtg</p>
+          <p className="tgbtg">tGbtg!</p>
         </div>
-        <div className="meet-tiffany-img-container"></div>
+        <div className="meet-tiffany-img-container">
+          <img className="meet-tiffany-img" src="/images/LandingPage-Images/Tiffany1.png" alt="" />
+        </div>
       </div>
     </>
   );
