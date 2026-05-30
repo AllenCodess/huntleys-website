@@ -128,6 +128,20 @@ svg {
   padding-left: 0.5rem;
 }
 
+/* About Hero Section */
+
+.AboutHeroSection {
+  padding-top: 0;
+}
+
+.about-hero-img {
+  width: 100%;
+  height: 470px;
+  object-position: 0% 55%;
+  object-fit: cover;
+  z-index: 1;
+}
+
 /* Section */
 
 .section-text {
