@@ -21,15 +21,6 @@ const KitchentoTableSection = () => {
           <p className="tgbtg">tGbtg!</p>
         </div>
       </div>
-      <section className="third-section third-section-container">
-        <div className="img-container-third-section">
-          <img className="third-section-img" src="/images/abovefooterabout.png" alt="" />
-          <div className="third-section-header">
-            <h2 className="third-section-title-header">Taste the Difference</h2>
-            <h2 className="third-section-subheader">MAKES ALL FOOD COMPLETE!</h2>
-          </div>
-        </div>
-      </section>
     </>
   );
 };

@@ -3,6 +3,7 @@ import AboutMeetTiifany from "../components/AboutMeetTiffany";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import KitchentoTableSection from "../components/KitchentoTableSection";
+import ThirdSection from "../components/ThirdSection";
 
 const About = () => {
   return (
@@ -11,6 +12,7 @@ const About = () => {
       <AboutHeroSection />
       <AboutMeetTiifany />
       <KitchentoTableSection />
+      <ThirdSection />
       <Footer />
     </>
   );

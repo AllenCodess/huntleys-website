@@ -36,7 +36,7 @@ function Header() {
             </Link>
           </div>
           <div className="hamburger">
-            <Hamburger toggled={isOpen} toggle={setOpen} color="white" />
+            <Hamburger toggled={isOpen} toggle={setOpen} color="darkblue" />
           </div>
         </div>
       </div>
