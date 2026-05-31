@@ -548,6 +548,28 @@ strong {
   line-height: 1.7rem;
 }
 
+/* CONTACT FORM */
+
+.contact-form-container {
+  border: #c63a32 solid 1px;
+}
+
+.contact-inputs {
+  width: 40%;
+}
+
+.name-inputs {
+  display: flex;
+}
+
+input {
+  display: block;
+}
+
+label {
+  display: none;
+}
+
 /* Footer */
 
 .footer-container {
