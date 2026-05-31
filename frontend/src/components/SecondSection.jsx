@@ -7,61 +7,37 @@ const SecondSection = () => {
       </div>
       <div className="sauce-collection-container">
         <div className="sauce-collection-item">
-          <img
-            className="collection-image"
-            src="/images/LandingPage-Images/Jars/seafoodDippinV2.png"
-            alt=""
-          />
+          <img className="collection-image" src="/images/seafoodDippinV2.png" alt="" />
           <p className="sauce-name">Seafood Dippin' Sauce</p>
           <p className="collection-price">$5.99</p>
           <button className="collection-btn"> ADD TO CART</button>
         </div>
         <div className="sauce-collection-item">
-          <img
-            className="collection-image"
-            src="/images/LandingPage-Images/Jars/cockTailSauce.png"
-            alt=""
-          />
+          <img className="collection-image" src="/images/cockTailSauce.png" alt="" />
           <p className="sauce-name">CockTail Sauce</p>
           <p className="collection-price">$5.99</p>
           <button className="collection-btn"> ADD TO CART</button>
         </div>
         <div className="sauce-collection-item">
-          <img
-            className="collection-image"
-            src="/images/LandingPage-Images/Jars/TartarSauce.png"
-            alt=""
-          />
+          <img className="collection-image" src="/images/TartarSauce.png" alt="" />
           <p className="sauce-name">Spicy Tartar Sauce</p>
           <p className="collection-price">$5.99</p>
           <button className="collection-btn"> ADD TO CART</button>
         </div>
         <div className="sauce-collection-item">
-          <img
-            className="collection-image"
-            src="/images/LandingPage-Images/Jars/BBQandHoneyMustard.png"
-            alt=""
-          />
+          <img className="collection-image" src="/images/BBQandHoneyMustard.png" alt="" />
           <p className="sauce-name">BBQ & Honey Mustard </p>
           <p className="collection-price">$5.99</p>
           <button className="collection-btn"> ADD TO CART</button>
         </div>
         <div className="sauce-collection-item">
-          <img
-            className="collection-image"
-            src="/images/LandingPage-Images/Jars/BlazinBlueCheese.png"
-            alt=""
-          />
+          <img className="collection-image" src="/images/BlazinBlueCheese.png" alt="" />
           <p className="sauce-name">Blazin' Blue Cheese </p>
           <p className="collection-price">$5.99</p>
           <button className="collection-btn"> ADD TO CART</button>
         </div>
         <div className="sauce-collection-item">
-          <img
-            className="collection-image"
-            src="/images/LandingPage-Images/Jars/BlazinRanch.png"
-            alt=""
-          />
+          <img className="collection-image" src="/images/BlazinRanch.png" alt="" />
           <p className="sauce-name">Blazin' Ranch Sauce</p>
           <p className="collection-price">$5.99</p>
           <button className="collection-btn"> ADD TO CART</button>

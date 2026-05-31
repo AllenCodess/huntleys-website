@@ -2,11 +2,7 @@ const KitchentoTableSection = () => {
   return (
     <>
       <div className="kitchen-to-table-section-container container">
-        <img
-          className="kitchen-to-table-img"
-          src="/images/LandingPage-Images/Jars/3saucesBackground.png"
-          alt=""
-        />
+        <img className="kitchen-to-table-img" src="/images/3saucesBackground.png" alt="" />
 
         <div className="kitchen-to-table-text-container">
           <h2 className="from-kitchen-header">From a Kitchen to Your Table</h2>
@@ -27,11 +23,7 @@ const KitchentoTableSection = () => {
       </div>
       <section className="third-section third-section-container">
         <div className="img-container-third-section">
-          <img
-            className="third-section-img"
-            src="/images/LandingPage-Images/abovefooterabout.png"
-            alt=""
-          />
+          <img className="third-section-img" src="/images/abovefooterabout.png" alt="" />
           <div className="third-section-header">
             <h2 className="third-section-title-header">Taste the Difference</h2>
             <h2 className="third-section-subheader">MAKES ALL FOOD COMPLETE!</h2>

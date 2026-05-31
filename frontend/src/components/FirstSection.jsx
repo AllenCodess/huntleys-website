@@ -16,7 +16,7 @@ const FirstSection = () => {
             </Link>
           </div>
 
-          <img className="section-img" src="/images/LandingPage-Images/sauce.png" alt="" />
+          <img className="section-img" src="/images/sauce.png" alt="" />
         </div>
         <div className="section-flex-item">
           <div className="section-text-container">
@@ -30,7 +30,7 @@ const FirstSection = () => {
             </Link>
           </div>
 
-          <img className="section-img" src="/images/LandingPage-Images/signin-img.png" alt="" />
+          <img className="section-img" src="/images/signin-img.png" alt="" />
         </div>
         <div className="section-flex-item">
           <div className="section-text-container">
@@ -40,7 +40,7 @@ const FirstSection = () => {
             <button className="section-btn">VIEW FEATURED</button>
           </div>
 
-          <img className="section-img" src="/images/LandingPage-Images/bundles.png" alt="" />
+          <img className="section-img" src="/images/bundles.png" alt="" />
         </div>
       </div>
     </section>

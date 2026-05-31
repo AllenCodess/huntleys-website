@@ -4,7 +4,7 @@ const AboutHeroSection = () => {
       <div className="about-hero-container">
         <img
           className="about-hero-img"
-          src="/images/LandingPage-Images/Jars/6JarsBackground.png"
+          src="/images/6JarsBackground.png"
           alt="Six Huntley Products"
         />
         <div className="about-header-container">
@@ -16,7 +16,7 @@ const AboutHeroSection = () => {
         <div className="right-side-hero-container">
           <img
             className="about-hero-img-tiffany"
-            src="/images/LandingPage-Images/Tiffany3RemovebgPreview.png"
+            src="/images/Tiffany3RemovebgPreview.png"
             alt=""
           />
           <div className="about-hero-text-container">

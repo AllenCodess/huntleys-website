@@ -21,13 +21,9 @@ const AboutMeetTiifany = () => {
         <p className="tgbtg">tGbtg!</p>
       </div>
       <div className="meet-tiffany-img-container">
-        <img
-          className="meet-tiffany-img item1"
-          src="/images/LandingPage-Images/Tiffany1.png"
-          alt=""
-        />
-        <img className="meet-tiffany-img" src="/images/LandingPage-Images/Cordell.png" alt="" />
-        <img className="meet-tiffany-img" src="/images/LandingPage-Images/Kimberly.png" alt="" />
+        <img className="meet-tiffany-img item1" src="/images/Tiffany1.png" alt="" />
+        <img className="meet-tiffany-img" src="/images/Cordell.png" alt="" />
+        <img className="meet-tiffany-img" src="/images/Kimberly.png" alt="" />
       </div>
     </div>
   );
