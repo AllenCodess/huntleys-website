@@ -19,6 +19,9 @@ function Header() {
             </div>
           </Link>
           <div className={`navigation-links ${isOpen ? "open" : ""}`}>
+            <Link className="nav-links" to="/">
+              HOME
+            </Link>
             <Link className="nav-links" to="/products">
               SHOP ALL
             </Link>

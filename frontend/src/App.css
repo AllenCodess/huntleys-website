@@ -542,6 +542,7 @@ strong {
 
   .navigation-links {
     display: none;
+    background-color: white;
   }
 
   .navigation-links.open {
@@ -557,8 +558,13 @@ strong {
     text-align: center;
   }
 
+  .nav-links {
+    color: white;
+  }
+
   .navIconText {
     margin: 0 auto;
+    color: white;
   }
 
   .hero-section-font-one {
