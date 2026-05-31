@@ -137,6 +137,7 @@ svg {
 
 .AboutHeroSection {
   padding-top: 0;
+  padding-bottom: 0;
 }
 
 .about-hero-container {
@@ -235,6 +236,55 @@ strong {
   left: 10px;
   top: 140px;
   flex-direction: column;
+}
+
+/* Contact Hero Section */
+
+.contact-hero-img {
+  width: 100%;
+  height: 470px;
+  object-position: 0% 64%;
+  object-fit: cover;
+  position: relative;
+}
+
+.contact-hero-section-text-container {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  width: 30%;
+}
+
+.contact-hero-title,
+.contact-hero-connected {
+  color: #c63a32;
+}
+
+.contact-hero-title {
+  font-family: "Tangerine", cursive;
+  font-size: 35px;
+}
+
+.contact-hero-header {
+  font-size: 60px;
+  line-height: 3.6rem;
+  margin: 1rem 0;
+}
+
+.contact-hero-description {
+  font-size: 14px;
+  width: 66%;
+  line-height: 1.4rem;
+}
+
+.contact-hero-description,
+.contact-hero-header {
+  color: #0e2a4e;
+  font-family: "Stack Sans Headline", sans-serif;
+}
+
+.contact-hero-container {
+  padding-top: 0;
 }
 
 /* Section */
@@ -478,6 +528,7 @@ strong {
   display: flex;
   gap: 40px;
   padding: 1rem 1rem;
+  background-color: #eae4d8;
 }
 
 .from-kitchen-header {
@@ -688,6 +739,10 @@ strong {
 
   .kitchen-to-table-img {
     width: 100%;
+  }
+
+  .contact-hero-section-text-container {
+    width: 70%;
   }
 }
 
