@@ -2,7 +2,6 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
-import Footer from "./Footer";
 
 const ContactForm = () => {
   const [firstname, setFirstName] = useState("");
@@ -101,7 +100,6 @@ const ContactForm = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 };

@@ -1,6 +1,7 @@
 import Header from "../components/Header";
 import ContactHeroSection from "../components/ContactHeroSection";
 import ContactForm from "../components/ContactForm";
+import Footer from "../components/Footer";
 
 const ContactScreen = () => {
   return (
@@ -8,6 +9,7 @@ const ContactScreen = () => {
       <Header />
       <ContactHeroSection />
       <ContactForm />
+      <Footer />
     </>
   );
 };
