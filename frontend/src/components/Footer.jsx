@@ -36,7 +36,7 @@ const Footer = () => {
           </Link>
         </div>
       </div>
-      <p className="copyright container">Copyright © {year} Huntley's INC</p>
+      <p className="copyright container">Copyright © {year} Huntley's Inc. All Rights Reserved.</p>
     </footer>
   );
 };
