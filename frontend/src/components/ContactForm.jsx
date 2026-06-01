@@ -11,11 +11,12 @@ const ContactForm = () => {
     <>
       <div className="contact-form-container container">
         <h2 className="contact-form-title">Send Us A message</h2>
-        <h2 className="contact-form-header">Contact US</h2>
+        <h2 className="contact-form-header">CONTACT US</h2>
         <div className="contact-inputs">
           <div className="name-inputs">
             <label>First Name</label>
             <input
+              className="name-input-field"
               type="text"
               name="firstname"
               value={firstname}
@@ -24,6 +25,7 @@ const ContactForm = () => {
             />
             <label>Last Name</label>
             <input
+              className="name-input-field"
               type="text"
               name="lastname"
               value={lastname}
@@ -66,6 +68,7 @@ const ContactForm = () => {
             placeholder="Your Message"
             onChange={(e) => setMessage(e.target.value)}
           />
+          <button className="contact-form-btn">SEND MESSAGE</button>
         </div>
       </div>
     </>
