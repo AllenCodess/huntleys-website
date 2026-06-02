@@ -3,7 +3,7 @@ const ContactHeroSection = () => {
     <>
       <div className="contact-hero-container container">
         <div className="img-container">
-          <img className="contact-hero-img" src="/images/aboutheroimg.png" alt="" />
+          <img className="contact-hero-img" src="/images/contact-heroimg.png" alt="" />
 
           <div className="contact-hero-section-text-container">
             <h2 className="contact-hero-title">We'd Love to Hear From You!</h2>

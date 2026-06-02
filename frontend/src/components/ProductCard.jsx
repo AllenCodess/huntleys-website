@@ -3,7 +3,9 @@ import { Link } from "react-router";
 const ProductCard = ({ product }) => {
   return (
     <div className="card-container">
-      <img className="productimg" src={product.image} alt="" />
+      <Link className="productslink" to={`/product/${product._id}`}>
+        <img className="productimg" src={product.image} alt="" />
+      </Link>
 
       <div className="product-text-container">
         <Link className="productslink" to={`/product/${product._id}`}>
