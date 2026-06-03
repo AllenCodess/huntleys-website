@@ -1,9 +1,22 @@
 import Footer from "../components/Footer.jsx";
 import Header from "../components/Header";
 import ProductCard from "../components/ProductCard";
-import products from "../products.js";
+import { useState, useEffect } from "react";
 
 const ProductsScreen = () => {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await fetch("/api/products");
+      const response = await data.json();
+
+      setProducts(response);
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <>
       <Header />
