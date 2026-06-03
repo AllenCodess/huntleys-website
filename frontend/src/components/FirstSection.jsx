@@ -8,7 +8,7 @@ const FirstSection = () => {
       <div className="section-flex-container">
         <div className="section-flex-item">
           <div className="section-text-container">
-            <FontAwesomeIcon className=" circle-icon" icon={faStar} size="lg" />
+            <FontAwesomeIcon className=" circle-icon" icon={faStar} size="s" />
             <h2 className="section-header">SAUCES</h2>
             <p className="section-description">Bold flavours for every meal.</p>
             <Link to={"/products"}>
@@ -20,7 +20,7 @@ const FirstSection = () => {
         </div>
         <div className="section-flex-item">
           <div className="section-text-container">
-            <FontAwesomeIcon className=" circle-icon" icon={faStar} size="lg" />
+            <FontAwesomeIcon className=" circle-icon" icon={faStar} size="s" />
             <h2 className="section-header">SIGN IN</h2>
             <p className="section-description">
               Sign in to your account to track orders, save favorites, and more.
@@ -34,7 +34,7 @@ const FirstSection = () => {
         </div>
         <div className="section-flex-item">
           <div className="section-text-container">
-            <FontAwesomeIcon className=" circle-icon" icon={faStar} size="lg" />
+            <FontAwesomeIcon className=" circle-icon" icon={faStar} size="" />
             <h2 className="section-header">FEATURED</h2>
             <p className="section-description">Check out our featured sauce.</p>
             <button className="section-btn">VIEW FEATURED</button>
