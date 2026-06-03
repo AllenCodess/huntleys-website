@@ -721,6 +721,60 @@ label {
 
 /* Product Details Page */
 
+.product-details-container {
+  display: flex;
+  justify-content: center;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 1.4rem 0;
+}
+
+.product-details-left {
+  flex: 1;
+  text-align: center;
+}
+
+.productDetailsimg {
+  width: 60%;
+}
+
+.product-details-right {
+  flex: 1;
+}
+
+.huntleys-heading {
+  font-family: "Stack Sans Headline", sans-serif;
+  color: #0e2a4e;
+}
+
+.product-details-sauce-name {
+  font-family: "Stack Sans Headline", sans-serif;
+  color: #0e2a4e;
+}
+
+.product-details-price {
+  color: #c63a32;
+  font-family: "Stack Sans Headline", sans-serif;
+  margin-top: 3rem;
+  font-size: 24px;
+}
+
+.product-details-description {
+  font-family: "Stack Sans Headline", sans-serif;
+  width: 80%;
+  margin-top: 2rem;
+}
+
+.product-details-btn {
+  background-color: #c63a32;
+  color: white;
+  padding: 0.7rem;
+  border: none;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 8px;
+}
+
 /* Footer */
 
 .footer-container {
