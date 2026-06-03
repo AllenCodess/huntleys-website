@@ -1203,6 +1203,14 @@ label {
     grid-template-columns: 1fr 1fr;
     gap: 20px;
   }
+
+  .product-details-container {
+    flex-direction: column;
+  }
+
+  .product-details-right {
+    padding-left: 3rem;
+  }
 }
 
 @media (max-width: 508px) {
