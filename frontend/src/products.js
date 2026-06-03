@@ -45,7 +45,7 @@ const products = [
     image: "/images/BlazinRanch.png",
     price: 4.99,
     description:
-      "Made from Grandma Hayes' original recipe, Huntley’s Spicy Tartar Sauce delivers the perfect balance of bold spice and classic tartar flavor. Delicious with fried fish, shrimp, crab cakes, and fish tacos, it's the only seafood sauce you'll need.",
+      "Huntley's Blazin' Ranch Sauce delivers the creamy, classic flavor of ranch with a bold kick of heat. Perfect for wings, chicken tenders, burgers, sandwiches, wraps, fries, and fresh vegetables, this versatile sauce adds the perfect balance of cool, creamy flavor and zesty spice to every bite.",
   },
 ];
 
