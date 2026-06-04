@@ -1,12 +1,24 @@
 import { useParams } from "react-router";
-import products from "../products";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import { useEffect, useState } from "react";
 
 const ProductDetails = () => {
   const { id: productId } = useParams();
-  const product = products.find((p) => p._id === productId);
-  console.log(product);
+  console.log("productId:", productId);
+  const [product, setProduct] = useState({});
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await fetch(`/api/products/${productId}`);
+      const response = await data.json();
+      console.log(response);
+      setProduct(response);
+    };
+
+    fetchData();
+  }, [productId]);
+
   return (
     <>
       <Header />

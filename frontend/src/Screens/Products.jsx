@@ -10,7 +10,7 @@ const ProductsScreen = () => {
     const fetchData = async () => {
       const data = await fetch("/api/products");
       const response = await data.json();
-
+      console.log(response);
       setProducts(response);
     };
 
