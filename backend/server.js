@@ -2,6 +2,7 @@ import express from "express";
 import connectDB from "./config/db.js";
 import dotenv from "dotenv";
 import Product from "./models/productModel.js";
+import productRoutes from "./routes/productRoutes.js";
 
 dotenv.config();
 connectDB();
@@ -9,6 +10,8 @@ connectDB();
 const port = process.env.PORT;
 
 const app = express();
+
+app.use("/api/products", productRoutes);
 
 app.get("/api/products", async (req, res) => {
   const products = await Product.find({});
