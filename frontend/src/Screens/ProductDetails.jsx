@@ -5,14 +5,14 @@ import { useEffect, useState } from "react";
 
 const ProductDetails = () => {
   const { id: productId } = useParams();
-  console.log("productId:", productId);
+
   const [product, setProduct] = useState({});
 
   useEffect(() => {
     const fetchData = async () => {
       const data = await fetch(`/api/products/${productId}`);
       const response = await data.json();
-      console.log(response);
+
       setProduct(response);
     };
 
