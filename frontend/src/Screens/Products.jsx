@@ -1,22 +1,10 @@
 import Footer from "../components/Footer.jsx";
 import Header from "../components/Header";
 import ProductCard from "../components/ProductCard";
-import { useState, useEffect } from "react";
+import { useGetProductsQuery } from "../slices/productApiSlice.js";
 
 const ProductsScreen = () => {
-  const [products, setProducts] = useState([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const data = await fetch("/api/products");
-      const response = await data.json();
-
-      setProducts(response);
-    };
-
-    fetchData();
-  }, []);
-
+  const { data: products, isLoading, error } = useGetProductsQuery();
   return (
     <>
       <Header />
@@ -29,11 +17,17 @@ const ProductsScreen = () => {
             flavour to every meal.
           </p>
         </div>
-        <div className="display-product-card">
-          {products.map((product) => (
-            <ProductCard key={product._id} product={product} />
-          ))}
-        </div>
+        {isLoading ? (
+          <div>Loading . . . </div>
+        ) : error ? (
+          <div>{error?.data.message || error.error}</div>
+        ) : (
+          <div className="display-product-card">
+            {products.map((product) => (
+              <ProductCard key={product._id} product={product} />
+            ))}
+          </div>
+        )}
       </div>
       <Footer />
     </>
