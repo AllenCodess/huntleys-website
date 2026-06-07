@@ -1,7 +1,18 @@
 import { useGetProductsQuery } from "../slices/productApiSlice.js";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../slices/cartSlice.js";
+import { useState } from "react";
 
 const SecondSection = () => {
-  const { data: products, isLoading, error } = useGetProductsQuery();
+  const { data: products } = useGetProductsQuery();
+
+  const dispatch = useDispatch();
+
+  const [qty, setQty] = useState(1);
+
+  const addToCartHandler = (product) => {
+    dispatch(addToCart({ ...product, qty }));
+  };
   return (
     <section className="collection collection-container">
       <div className="collection-header">
@@ -14,7 +25,13 @@ const SecondSection = () => {
             <img className="collection-image" src={product.image} alt={product.name} />
             <p className="sauce-name">{product.name}</p>
             <p className="collection-price">${product.price}</p>
-            <button className="collection-btn">ADD TO CART</button>
+            <button
+              className="collection-btn"
+              onClick={() => addToCartHandler(product)}
+              disabled={product.countInStock === 0}
+            >
+              ADD TO CART
+            </button>
           </div>
         ))}
       </div>
