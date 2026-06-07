@@ -37,7 +37,9 @@ const FirstSection = () => {
             <FontAwesomeIcon className=" circle-icon" icon={faStar} size="" />
             <h2 className="section-header">FEATURED</h2>
             <p className="section-description">Check out our featured sauce.</p>
-            <button className="section-btn">VIEW FEATURED</button>
+            <Link to={"/product/6a21601655fc69065b469c66"}>
+              <button className="section-btn">VIEW FEATURED</button>
+            </Link>
           </div>
 
           <img className="section-img" src="/images/featuredv2.png" alt="" />
