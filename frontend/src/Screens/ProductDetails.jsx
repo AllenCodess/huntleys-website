@@ -2,16 +2,21 @@ import { useParams } from "react-router";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { useGetProductDetailsQuery } from "../slices/productApiSlice.js";
+import { ClipLoader } from "react-spinners";
 
 const ProductDetails = () => {
   const { id: productId } = useParams();
   const { data: product, isLoading, error } = useGetProductDetailsQuery(productId);
+  const override = {
+    display: "block",
+    margin: "0 auto",
+  };
 
   return (
     <>
       <Header />
       {isLoading ? (
-        <div> Loading . . .</div>
+        <ClipLoader cssOverride={override} size={150} speedMultiplier={10} />
       ) : error ? (
         <div>{error?.data?.message || error.error}</div>
       ) : (
