@@ -390,17 +390,23 @@ strong {
 .sauce-collection-item {
   background-color: white;
   border: #ffc04b solid 1px;
-  height: 363px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 0.5rem;
   text-align: center;
   width: 15%;
 }
 
 .sauce-name {
   font-family: "Stack Sans Headline", sans-serif;
-  margin-top: -1rem;
+  height: 45px;
+  display: flex;
+  flex-direction: column;
   font-weight: 600;
   font-size: 18px;
   color: #0e2a4e;
+  padding: 0 0.5rem;
 }
 
 .collection-price {
@@ -414,6 +420,7 @@ strong {
 }
 
 .collection-btn {
+  margin: 0 auto;
   margin-top: 0.8rem;
   color: white;
   padding: 0.8rem 0.4rem;
@@ -421,6 +428,7 @@ strong {
   background-color: #c63a32;
   margin-bottom: 1rem;
   border: 1px solid white;
+  width: 70%;
 }
 
 /* Third section */

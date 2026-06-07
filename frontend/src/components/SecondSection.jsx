@@ -1,4 +1,7 @@
+import { useGetProductsQuery } from "../slices/productApiSlice.js";
+
 const SecondSection = () => {
+  const { data: products, isLoading, error } = useGetProductsQuery();
   return (
     <section className="collection collection-container">
       <div className="collection-header">
@@ -6,42 +9,14 @@ const SecondSection = () => {
         <h2 className="collection-subtitle"> SHOP OUR SAUCES</h2>
       </div>
       <div className="sauce-collection-container">
-        <div className="sauce-collection-item">
-          <img className="collection-image" src="/images/seafoodDippinV2.png" alt="" />
-          <p className="sauce-name">Seafood Dippin' Sauce</p>
-          <p className="collection-price">$5.99</p>
-          <button className="collection-btn"> ADD TO CART</button>
-        </div>
-        <div className="sauce-collection-item">
-          <img className="collection-image" src="/images/cockTailSauce.png" alt="" />
-          <p className="sauce-name">CockTail Sauce</p>
-          <p className="collection-price">$5.99</p>
-          <button className="collection-btn"> ADD TO CART</button>
-        </div>
-        <div className="sauce-collection-item">
-          <img className="collection-image" src="/images/TartarSauce.png" alt="" />
-          <p className="sauce-name">Spicy Tartar Sauce</p>
-          <p className="collection-price">$5.99</p>
-          <button className="collection-btn"> ADD TO CART</button>
-        </div>
-        <div className="sauce-collection-item">
-          <img className="collection-image" src="/images/BBQandHoneyMustard.png" alt="" />
-          <p className="sauce-name">BBQ & Honey Mustard </p>
-          <p className="collection-price">$5.99</p>
-          <button className="collection-btn"> ADD TO CART</button>
-        </div>
-        <div className="sauce-collection-item">
-          <img className="collection-image" src="/images/BlazinBlueCheese.png" alt="" />
-          <p className="sauce-name">Blazin' Blue Cheese </p>
-          <p className="collection-price">$5.99</p>
-          <button className="collection-btn"> ADD TO CART</button>
-        </div>
-        <div className="sauce-collection-item">
-          <img className="collection-image" src="/images/BlazinRanch.png" alt="" />
-          <p className="sauce-name">Blazin' Ranch Sauce</p>
-          <p className="collection-price">$5.99</p>
-          <button className="collection-btn"> ADD TO CART</button>
-        </div>
+        {products?.map((product) => (
+          <div className="sauce-collection-item" key={product._id}>
+            <img className="collection-image" src={product.image} alt={product.name} />
+            <p className="sauce-name">{product.name}</p>
+            <p className="collection-price">${product.price}</p>
+            <button className="collection-btn">ADD TO CART</button>
+          </div>
+        ))}
       </div>
     </section>
   );
