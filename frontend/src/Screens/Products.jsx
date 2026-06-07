@@ -3,6 +3,10 @@ import Header from "../components/Header";
 import ProductCard from "../components/ProductCard";
 import { useGetProductsQuery } from "../slices/productApiSlice.js";
 import { ClipLoader } from "react-spinners";
+import { useState } from "react";
+import { useNavigate, useParams } from "react-router";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../slices/cartSlice.js";
 
 const ProductsScreen = () => {
   const { data: products, isLoading, error } = useGetProductsQuery();

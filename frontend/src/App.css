@@ -784,6 +784,12 @@ label {
   border-radius: 8px;
 }
 
+.qty-select {
+  width: 70px;
+  padding: 0.4rem;
+  border-radius: 8px;
+}
+
 /* Footer */
 
 .footer-container {
