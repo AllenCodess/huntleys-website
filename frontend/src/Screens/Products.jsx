@@ -2,9 +2,14 @@ import Footer from "../components/Footer.jsx";
 import Header from "../components/Header";
 import ProductCard from "../components/ProductCard";
 import { useGetProductsQuery } from "../slices/productApiSlice.js";
+import { ClipLoader } from "react-spinners";
 
 const ProductsScreen = () => {
   const { data: products, isLoading, error } = useGetProductsQuery();
+  const override = {
+    display: "block",
+    margin: "0 auto",
+  };
   return (
     <>
       <Header />
@@ -18,7 +23,7 @@ const ProductsScreen = () => {
           </p>
         </div>
         {isLoading ? (
-          <div>Loading . . . </div>
+          <ClipLoader cssOverride={override} size={150} speedMultiplier={10} />
         ) : error ? (
           <div>{error?.data.message || error.error}</div>
         ) : (
