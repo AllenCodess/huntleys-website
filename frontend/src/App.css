@@ -812,6 +812,12 @@ label {
   border-radius: 8px;
 }
 
+.qty-selector {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+}
+
 /* Cart Screen */
 
 .cart-container {
@@ -875,8 +881,20 @@ label {
   font-family: "Stack Sans Headline", sans-serif;
   font-size: 16px;
   margin-top: 1rem;
+  cursor: pointer;
 }
 
+.cart-trash {
+  background-color: red;
+  padding: 0.3rem;
+}
+
+.cart-trash-btn {
+  margin-left: 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
 /* Footer */
 
 .footer-container {

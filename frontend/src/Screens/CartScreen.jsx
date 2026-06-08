@@ -3,8 +3,7 @@ import { Link, useNavigate } from "react-router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import Header from "../components/Header";
-
-import { addToCart } from "../slices/cartSlice.js";
+import { addToCart, removeFromCart } from "../slices/cartSlice";
 
 const CartScreen = () => {
   const navigate = useNavigate();
@@ -12,6 +11,10 @@ const CartScreen = () => {
 
   const cart = useSelector((state) => state.cart);
   const { cartItems, itemsPrice, shippingPrice, taxPrice, totalPrice } = cart;
+
+  const removeFromCartHandler = (id) => {
+    dispatch(removeFromCart(id));
+  };
 
   return (
     <>
@@ -43,6 +46,12 @@ const CartScreen = () => {
                         </option>
                       ))}
                     </select>
+                    <button
+                      className="cart-trash-btn"
+                      onClick={() => removeFromCartHandler(item._id)}
+                    >
+                      <FontAwesomeIcon icon={faTrash} className="cart-trash" />
+                    </button>
                   </div>
                 </div>
               ))}
