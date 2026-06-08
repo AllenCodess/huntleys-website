@@ -4,9 +4,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import Hamburger from "hamburger-react";
 import { useState } from "react";
+import { useSelector } from "react-redux";
 
 function Header() {
   const [isOpen, setOpen] = useState(false);
+  const { cartItems } = useSelector((state) => state.cart);
 
   return (
     <>
@@ -35,7 +37,11 @@ function Header() {
               SIGN IN <FontAwesomeIcon className="nav-icon" icon={faUser} size="s" />
             </Link>
             <Link className="navIconText" to="/cart">
-              CART <FontAwesomeIcon className="nav-icon" icon={faCartShopping} size="s" />
+              CART
+              <FontAwesomeIcon className="nav-icon" icon={faCartShopping} size="s" />
+              {cartItems.length > 0 && (
+                <span className="cart-length-number">{cartItems.length}</span>
+              )}
             </Link>
           </div>
           <div className="hamburger">

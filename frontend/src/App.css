@@ -56,6 +56,20 @@
 
 .nav-icon {
   color: #0e2a4e;
+  position: relative;
+}
+
+.cart-length-number {
+  background-color: red;
+  position: absolute;
+  color: white;
+  text-align: center;
+  font-size: 13px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  right: 10px;
+  top: 3px;
 }
 
 /* Hamburger Menu */
