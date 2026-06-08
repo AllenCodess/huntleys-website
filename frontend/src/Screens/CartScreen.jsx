@@ -5,6 +5,8 @@ import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
+import { addToCart } from "../slices/cartSlice.js";
+
 const CartScreen = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -17,6 +19,33 @@ const CartScreen = () => {
       <Header />
       <div className="cart-container container">
         <h1 className="cart-header">Shopping Cart</h1>
+        <div className="item-and-price-container">
+          <div className="item-list">
+            {cartItems?.map((item) => (
+              <div className="single-product" key={item._id}>
+                <img className="cart-image" src={item.image} alt={item.name} />
+                <p className="sauce-name">{item.name}</p>
+                <p className="collection-price">${item.price}</p>
+                <div className="qty-selector">
+                  <select
+                    value={item.qty}
+                    onChange={(e) => dispatch(addToCart({ ...item, qty: Number(e.target.value) }))}
+                    className="qty-select"
+                  >
+                    {[...Array(item.countInStock).keys()].map((x) => (
+                      <option key={x + 1} value={x + 1}>
+                        {x + 1}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="cart-price">
+            <h2>Price</h2>
+          </div>
+        </div>
       </div>
     </>
   );

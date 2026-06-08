@@ -818,9 +818,31 @@ label {
   background-color: white;
 }
 
+.item-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.item-and-price-container {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.single-product {
+  display: flex;
+  gap: 20px;
+  border-bottom: #0e2a4e solid 2px;
+}
+
 .cart-header {
   font-family: "Stack Sans Headline", sans-serif;
   color: #0e2a4e;
+}
+
+.cart-image {
+  width: 100px;
 }
 
 /* Footer */
