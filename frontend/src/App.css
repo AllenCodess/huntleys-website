@@ -822,12 +822,14 @@ label {
   display: flex;
   flex-direction: column;
   row-gap: 20px;
+  flex: 2;
 }
 
 .item-and-price-container {
   margin-top: 3rem;
   display: flex;
   justify-content: space-between;
+  gap: 60px;
 }
 
 .single-product {
@@ -841,8 +843,38 @@ label {
   color: #0e2a4e;
 }
 
+.cart-price-header {
+  font-size: 42px;
+}
+
 .cart-image {
   width: 100px;
+}
+
+.cart-price {
+  font-family: "Stack Sans Headline", sans-serif;
+  color: #0e2a4e;
+  border: solid 1px black;
+
+  margin-right: 14rem;
+  height: 40%;
+  flex: 1;
+  padding: 1rem 0.5rem;
+}
+
+.cart-prices {
+  padding: 0.6rem 0;
+  border-bottom: solid 1px black;
+}
+
+.cart-btn {
+  background-color: #05b9f5;
+  color: white;
+  padding: 0.7rem;
+  border-radius: 8px;
+  font-family: "Stack Sans Headline", sans-serif;
+  font-size: 16px;
+  margin-top: 1rem;
 }
 
 /* Footer */
@@ -1148,6 +1180,19 @@ label {
   .get-in-touch {
     width: 100%;
     margin: 2rem;
+  }
+
+  .item-and-price-container {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    justify-content: space-between;
+    row-gap: 50px;
+  }
+
+  .cart-price {
+    margin: 0 auto;
   }
 }
 
