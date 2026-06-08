@@ -64,7 +64,7 @@
   position: absolute;
   color: white;
   text-align: center;
-  font-size: 13px;
+  font-size: 12px;
   width: 18px;
   height: 18px;
   border-radius: 50%;
@@ -810,6 +810,17 @@ label {
   width: 70px;
   padding: 0.4rem;
   border-radius: 8px;
+}
+
+/* Cart Screen */
+
+.cart-container {
+  background-color: white;
+}
+
+.cart-header {
+  font-family: "Stack Sans Headline", sans-serif;
+  color: #0e2a4e;
 }
 
 /* Footer */
