@@ -100,7 +100,7 @@ const ContactForm = () => {
 
               <div className="icon-text-container">
                 <h2 className="contact-icon-header">EMAIL US</h2>
-                <p className="contact-icon-contact-info">huntleyssauce@yahoo.com</p>
+                <p className="contact-icon-contact-info">info@huntleysauce.com</p>
                 <p className="contact-icon-contact-info">We aim to respond within 24 hours.</p>
               </div>
             </div>
