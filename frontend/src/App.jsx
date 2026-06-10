@@ -9,6 +9,7 @@ import ProductsScreen from "./Screens/Products";
 import ProductDetails from "./Screens/ProductDetails";
 import CartScreen from "./Screens/CartScreen";
 import LoginScreen from "./Screens/Login";
+import RegisterScreen from "./Screens/register";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -22,6 +23,7 @@ const App = () => {
           <Route path="/about" element={<About />}></Route>
           <Route path="/cart" element={<CartScreen />}></Route>
           <Route path="/contact" element={<ContactScreen />}></Route>
+          <Route path="/register" element={<RegisterScreen />}></Route>
           <Route path="/login" element={<LoginScreen />}></Route>
           <Route path="/products" element={<ProductsScreen />}></Route>
           <Route path="/product/:id" element={<ProductDetails />}></Route>

@@ -69,6 +69,9 @@ const LoginScreen = () => {
               onChange={handleChange}
             />
             <button className="login-btn">Login</button>
+            <p className="register-text">
+              No Account? <Link to={"/register"}>Register</Link>
+            </p>
           </form>
         </div>
       </div>

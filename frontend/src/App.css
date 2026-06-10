@@ -983,6 +983,47 @@ label {
   background-color: white;
 }
 
+.register-text {
+  font-family: "Stack Sans Headline", sans-serif;
+  margin-top: -1rem;
+  margin-bottom: 1rem;
+}
+
+/* REGISTER PAGE */
+
+.register-page-container {
+  font-family: "Stack Sans Headline", sans-serif;
+  background-color: white;
+}
+
+.register-form-container {
+  border: 1px solid rgb(202, 202, 202);
+  padding: 1rem 0;
+  border-radius: 8px;
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.register-inputs {
+  margin: 1rem auto;
+  width: 40%;
+  font-size: 16px;
+}
+
+.register-btn {
+  background-color: #05b9f5;
+  width: 150px;
+  color: white;
+  padding: 0.3rem;
+  border-radius: 8px;
+  font-family: "Stack Sans Headline", sans-serif;
+  font-size: 13px;
+  margin-top: 1rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
 /* Footer */
 
 .footer-container {
