@@ -9,6 +9,7 @@ import { useSelector } from "react-redux";
 function Header() {
   const [isOpen, setOpen] = useState(false);
   const { cartItems } = useSelector((state) => state.cart);
+  const { userInfo } = useSelector((state) => state.auth);
 
   return (
     <>
@@ -33,9 +34,16 @@ function Header() {
             <Link className="nav-links" to="/contact">
               CONTACT
             </Link>
-            <Link className="navIconText" to="/login">
-              LOGIN <FontAwesomeIcon className="nav-icon" icon={faUser} size="s" />
-            </Link>
+            {userInfo ? (
+              <Link className="navIconText" to="/profile">
+                {userInfo.name.toUpperCase()}
+                <FontAwesomeIcon className="nav-icon" icon={faUser} size="s" />
+              </Link>
+            ) : (
+              <Link className="navIconText" to="/login">
+                LOGIN <FontAwesomeIcon className="nav-icon" icon={faUser} size="s" />
+              </Link>
+            )}
             <Link className="navIconText" to="/cart">
               CART
               <FontAwesomeIcon className="nav-icon" icon={faCartShopping} size="s" />

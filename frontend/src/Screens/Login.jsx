@@ -1,5 +1,9 @@
 import Header from "../components/Header";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { Link, useLocation, useNavigate } from "react-router";
+import { useDispatch, useSelector } from "react-redux";
+import { useLoginMutation } from "../slices/usersApiSlice";
+import { setCredentials } from "../slices/authSlice";
 
 const LoginScreen = () => {
   const [formData, setFormData] = useState({
@@ -11,9 +15,32 @@ const LoginScreen = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const [login, { isLoading }] = useLoginMutation();
+
+  const { userInfo } = useSelector((state) => state.auth);
+
+  const { search } = useLocation();
+  const sp = new URLSearchParams(search);
+  const redirect = sp.get("redirect") || "/";
+
+  useEffect(() => {
+    if (userInfo) {
+      navigate(redirect);
+    }
+  }, [navigate, redirect, userInfo]);
+
+  const submitHandler = async (e) => {
     e.preventDefault();
-    console.log(formData);
+    try {
+      const res = await login(formData).unwrap();
+      dispatch(setCredentials({ ...res }));
+      navigate(redirect);
+    } catch (err) {
+      console.error(err?.data?.message || err.error);
+    }
   };
 
   return (
@@ -22,7 +49,7 @@ const LoginScreen = () => {
       <div className="login-page-container container">
         <div className="login-form-container">
           <h1 className="login-header">SIGN IN</h1>
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={submitHandler}>
             <input
               className="login-inputs"
               type="email"
