@@ -9,11 +9,14 @@ import ProductsScreen from "./Screens/Products";
 import ProductDetails from "./Screens/ProductDetails";
 import CartScreen from "./Screens/CartScreen";
 import LoginScreen from "./Screens/Login";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const App = () => {
   return (
     <>
       <BrowserRouter>
+        <ToastContainer />
         <Routes>
           <Route path="/" element={<HomeScreen />}></Route>
           <Route path="/about" element={<About />}></Route>

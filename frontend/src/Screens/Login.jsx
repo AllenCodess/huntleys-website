@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from "react-router";
 import { useDispatch, useSelector } from "react-redux";
 import { useLoginMutation } from "../slices/usersApiSlice";
 import { setCredentials } from "../slices/authSlice";
+import { toast } from "react-toastify";
 
 const LoginScreen = () => {
   const [formData, setFormData] = useState({
@@ -37,9 +38,10 @@ const LoginScreen = () => {
     try {
       const res = await login(formData).unwrap();
       dispatch(setCredentials({ ...res }));
+      toast.success(`Welcome back ${res.name}!`);
       navigate(redirect);
     } catch (err) {
-      console.error(err?.data?.message || err.error);
+      toast.error(err?.data?.message || err.error);
     }
   };
 
