@@ -57,14 +57,14 @@ const LoginScreen = () => {
               type="email"
               name="email"
               value={formData.email}
-              placeholder="Email"
+              placeholder="email"
               onChange={handleChange}
             />
             <input
               className="login-inputs"
               type="password"
               name="password"
-              placeholder="Password"
+              placeholder="password"
               value={formData.password}
               onChange={handleChange}
             />

@@ -1,15 +1,33 @@
 import React from "react";
-import { Link } from "react-router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser, faCartShopping } from "@fortawesome/free-solid-svg-icons";
+import { faUser, faCartShopping, faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import Hamburger from "hamburger-react";
 import { useState } from "react";
-import { useSelector } from "react-redux";
+import { useLogoutMutation } from "../slices/usersApiSlice";
+import { logout } from "../slices/authslice.js";
+import { useNavigate, Link } from "react-router";
+import { useSelector, useDispatch } from "react-redux";
 
 function Header() {
   const [isOpen, setOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
   const { cartItems } = useSelector((state) => state.cart);
   const { userInfo } = useSelector((state) => state.auth);
+
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const [logoutApiCall] = useLogoutMutation();
+
+  const logoutHandler = async () => {
+    try {
+      await logoutApiCall().unwrap();
+      dispatch(logout());
+      navigate("/login");
+    } catch (err) {
+      console.error(err);
+    }
+  };
 
   return (
     <>
@@ -35,10 +53,29 @@ function Header() {
               CONTACT
             </Link>
             {userInfo ? (
-              <Link className="navIconText" to="/profile">
-                {userInfo.name.toUpperCase()}
-                <FontAwesomeIcon className="nav-icon" icon={faUser} size="s" />
-              </Link>
+              <div className="user-dropdown">
+                <button
+                  className="navIconText user-dropdown-btn"
+                  onClick={() => setDropdownOpen(!dropdownOpen)}
+                >
+                  {userInfo.name.toUpperCase()}
+                  <FontAwesomeIcon className="nav-icon" icon={faChevronDown} size="xs" />
+                </button>
+                {dropdownOpen && (
+                  <div className="dropdown-menu">
+                    <Link
+                      className="dropdown-item"
+                      to="/profile"
+                      onClick={() => setDropdownOpen(false)}
+                    >
+                      Profile
+                    </Link>
+                    <button className="dropdown-item" onClick={logoutHandler}>
+                      Logout
+                    </button>
+                  </div>
+                )}
+              </div>
             ) : (
               <Link className="navIconText" to="/login">
                 LOGIN <FontAwesomeIcon className="nav-icon" icon={faUser} size="s" />
