@@ -33,8 +33,8 @@ function Header() {
             <Link className="nav-links" to="/contact">
               CONTACT
             </Link>
-            <Link className="navIconText" to="/signin">
-              SIGN IN <FontAwesomeIcon className="nav-icon" icon={faUser} size="s" />
+            <Link className="navIconText" to="/login">
+              LOGIN <FontAwesomeIcon className="nav-icon" icon={faUser} size="s" />
             </Link>
             <Link className="navIconText" to="/cart">
               CART
