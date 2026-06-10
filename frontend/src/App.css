@@ -895,6 +895,44 @@ label {
   border: none;
   cursor: pointer;
 }
+
+/* Login Screen */
+
+.login-form-container {
+  border: 1px solid black;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 7rem;
+  text-align: center;
+}
+
+.login-header {
+  font-family: "Stack Sans Headline", sans-serif;
+  color: #0e2a4e;
+}
+
+.login-inputs {
+  margin: 1rem auto;
+  width: 40%;
+}
+
+.login-label {
+  color: black;
+}
+
+.login-btn {
+  background-color: #05b9f5;
+  width: 150px;
+  color: white;
+  padding: 0.3rem;
+  border-radius: 8px;
+  font-family: "Stack Sans Headline", sans-serif;
+  font-size: 13px;
+  margin-top: 1rem;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+
 /* Footer */
 
 .footer-container {
