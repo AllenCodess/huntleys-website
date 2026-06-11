@@ -1045,6 +1045,44 @@ label {
   margin-bottom: 1rem;
 }
 
+/* Payment Page */
+
+.payment-container {
+  width: 50%;
+  background-color: white;
+  font-family: "Stack Sans Headline", sans-serif;
+  text-align: center;
+}
+
+.payment-container fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.payment-radio-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.payment-radio-group label {
+  display: inline;
+}
+
+.payment-btn {
+  background-color: #05b9f5;
+  width: 150px;
+  color: white;
+  padding: 0.3rem;
+  border-radius: 8px;
+  font-family: "Stack Sans Headline", sans-serif;
+  font-size: 14px;
+  margin-top: 1rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
 /* REGISTER PAGE */
 
 .register-page-container {
@@ -1078,6 +1116,10 @@ label {
   margin-top: 1rem;
   cursor: pointer;
   margin-bottom: 1rem;
+}
+
+.payment-header {
+  margin-bottom: 2rem;
 }
 
 /* Footer */

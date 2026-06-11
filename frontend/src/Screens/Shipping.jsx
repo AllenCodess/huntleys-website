@@ -1,4 +1,7 @@
 import { useState } from "react";
+import { useNavigate } from "react-router";
+import { useDispatch } from "react-redux";
+import { saveShippingAddress } from "../slices/cartSlice";
 import Header from "../components/Header";
 import CheckoutSteps from "../components/CheckoutSteps";
 
@@ -10,13 +13,17 @@ const ShippingScreen = () => {
     country: "",
   });
 
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const submitHandler = (e) => {
     e.preventDefault();
-    console.log(formData);
+    dispatch(saveShippingAddress(formData));
+    navigate("/payment");
   };
 
   return (
