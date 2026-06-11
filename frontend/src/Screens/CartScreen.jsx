@@ -16,6 +16,10 @@ const CartScreen = () => {
     dispatch(removeFromCart(id));
   };
 
+  const checkoutHandler = () => {
+    navigate("/login?redirect=/shipping");
+  };
+
   return (
     <>
       <Header />
@@ -64,7 +68,9 @@ const CartScreen = () => {
               <p className="cart-prices">Shipping: {cart.shippingPrice}</p>
               <p className="cart-prices">Tax: {cart.taxPrice}</p>
               <p className="cart-prices">Total Price: {cart.totalPrice}</p>
-              <button className="cart-btn">Proceed To Checkout</button>
+              <button className="cart-btn" onClick={checkoutHandler}>
+                Proceed To Checkout
+              </button>
             </div>
           </div>
         )}
