@@ -1016,7 +1016,7 @@ label {
 .shipping-form-container {
   width: 50%;
   background-color: white;
-
+  font-family: "Stack Sans Headline", sans-serif;
   text-align: center;
 }
 
@@ -1025,7 +1025,7 @@ label {
 }
 
 .shipping-inputs {
-  width: 50%;
+  width: 60%;
   margin: 0 auto;
   margin-bottom: 1rem;
   padding: 0.7rem;
@@ -1283,6 +1283,9 @@ label {
 
   .contact-hero-section-text-container {
     width: 70%;
+  }
+  .shipping-inputs {
+    width: 100%;
   }
 }
 
