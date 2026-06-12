@@ -14,7 +14,7 @@ import ShippingScreen from "./Screens/Shipping";
 import { ToastContainer } from "react-toastify";
 import PrivateRoute from "./components/PrivateRoutes";
 import PaymentScreen from "./Screens/PaymentScreen";
-import PlaceOrderScreen from "./screens/PlaceOrderScreen";
+import PlaceOrderScreen from "./Screens/PlaceOrderScreen";
 import "react-toastify/dist/ReactToastify.css";
 
 const App = () => {
