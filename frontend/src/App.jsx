@@ -14,6 +14,7 @@ import ShippingScreen from "./Screens/Shipping";
 import { ToastContainer } from "react-toastify";
 import PrivateRoute from "./components/PrivateRoutes";
 import PaymentScreen from "./Screens/PaymentScreen";
+import PlaceOrderScreen from "./screens/PlaceOrderScreen";
 import "react-toastify/dist/ReactToastify.css";
 
 const App = () => {
@@ -35,6 +36,7 @@ const App = () => {
           <Route path="" element={<PrivateRoute />}>
             <Route path="/shipping" element={<ShippingScreen />}></Route>
             <Route path="/payment" element={<PaymentScreen />}></Route>
+            <Route path="/placeorder" element={<PlaceOrderScreen />} />
           </Route>
         </Routes>
       </BrowserRouter>
