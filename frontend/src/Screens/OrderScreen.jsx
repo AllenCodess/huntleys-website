@@ -31,7 +31,7 @@ function OrderScreen() {
             </p>
             <p>
               <strong>Address: </strong>
-              {order.shippingAddress.address}, {order.shippingAddress.city}
+              {order.shippingAddress.address}, {order.shippingAddress.city},
               {order.shippingAddress.postalCode}, {order.shippingAddress.country}
             </p>
             {order.isDelivered ? <p>Delivered on {order.deliveredAt}</p> : <p>Not Delivered</p>}

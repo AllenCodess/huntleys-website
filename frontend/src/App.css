@@ -1684,6 +1684,15 @@ label {
   .placeorder-right {
     width: 100%;
   }
+
+  .order-container {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .order-right {
+    width: 100%;
+  }
 }
 
 @media (max-width: 664px) {

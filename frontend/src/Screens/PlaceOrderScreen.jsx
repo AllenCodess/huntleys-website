@@ -55,7 +55,7 @@ function PlaceOrderScreen() {
             <h2>Shipping</h2>
             <p>
               <strong>Address: </strong>
-              {cart.shippingAddress.address}, {cart.shippingAddress.city}{" "}
+              {cart.shippingAddress.address}, {cart.shippingAddress.city},
             </p>
             <p>
               {cart.shippingAddress.postalCode}, {cart.shippingAddress.country}
@@ -71,7 +71,7 @@ function PlaceOrderScreen() {
           <div className="placeorder-section">
             <h2>Order Items</h2>
             {cart.cartItems.length === 0 ? (
-              <Message>Your cart is empty</Message>
+              <p>Your cart is empty</p>
             ) : (
               <div>
                 {cart.cartItems.map(function (item, index) {
@@ -114,7 +114,7 @@ function PlaceOrderScreen() {
               <span>${cart.totalPrice}</span>
             </div>
 
-            {error && <Message variant="danger">{error}</Message>}
+            {error && <p>{error?.data?.message || error.error}</p>}
 
             <button
               type="button"
@@ -125,7 +125,7 @@ function PlaceOrderScreen() {
               Place Order
             </button>
 
-            {isLoading && <Loader />}
+            {isLoading && <p>Placing order...</p>}
           </div>
         </div>
       </div>
