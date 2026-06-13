@@ -1,10 +1,30 @@
 import { Link, useParams } from "react-router";
+import { useEffect } from "react";
+import { PayPalButtons, usePayPalScriptReducer } from "@paypal/react-paypal-js";
 import Header from "../components/Header.jsx";
-import { useGetOrderDetailsQuery } from "../slices/ordersApiSlice.js";
+import { useSelector } from "react-redux";
+import { toast } from "react-toastify";
+import {
+  useGetOrderDetailsQuery,
+  usePayOrderMutation,
+  useGetPaypalClientIdQuery,
+} from "../slices/ordersApiSlice";
 
 function OrderScreen() {
   const { id: orderId } = useParams();
   const { data: order, refetch, isLoading, error } = useGetOrderDetailsQuery(orderId);
+
+  const [payOrder, { isLoading: loadingPay }] = usePayOrderMutation();
+
+  const { userInfo } = useSelector((state) => state.auth);
+
+  const [{ isPending }, paypalDispatch] = usePayPalScriptReducer();
+
+  const {
+    data: paypal,
+    isLoading: loadingPayPal,
+    error: errorPayPal,
+  } = useGetPaypalClientIdQuery();
 
   return isLoading ? (
     <h2>is Loading . . .</h2>
