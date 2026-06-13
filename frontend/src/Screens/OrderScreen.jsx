@@ -26,6 +26,62 @@ function OrderScreen() {
     error: errorPayPal,
   } = useGetPaypalClientIdQuery();
 
+  useEffect(() => {
+    if (!errorPayPal && !loadingPayPal && paypal && paypal.clientId) {
+      const loadPaypalScript = async () => {
+        paypalDispatch({
+          type: "resetOptions",
+          value: {
+            "client-id": paypal.clientId,
+            currency: "USD",
+          },
+        });
+        paypalDispatch({ type: "setLoadingStatus", value: "pending" });
+      };
+      if (order && !order.isPaid) {
+        if (!window.paypal) {
+          loadPaypalScript();
+        }
+      }
+    }
+  }, [errorPayPal, loadingPayPal, order, paypal, paypalDispatch]);
+
+  function onApprove(data, actions) {
+    return actions.order.capture().then(async function (details) {
+      try {
+        await payOrder({ orderId, details });
+        refetch();
+        toast.success("Order is paid");
+      } catch (err) {
+        toast.error(err?.data?.message || err.error);
+      }
+    });
+  }
+
+  async function onApproveTest() {
+    await payOrder({ orderId, details: { payer: {} } });
+    refetch();
+    toast.success("Order is paid");
+  }
+
+  function onError(err) {
+    toast.error(err.message);
+  }
+
+  function createOrder(data, actions) {
+    return actions.order
+      .create({
+        purchase_units: [
+          {
+            amount: { value: order.totalPrice },
+          },
+        ],
+      })
+      .then((orderID) => {
+        return orderID;
+      });
+  }
+
   return isLoading ? (
     <h2>is Loading . . .</h2>
   ) : error ? (
@@ -51,7 +107,7 @@ function OrderScreen() {
             </p>
             <p>
               <strong>Address: </strong>
-              {order.shippingAddress.address}, {order.shippingAddress.city},
+              {order.shippingAddress.address}, {order.shippingAddress.city},{" "}
               {order.shippingAddress.postalCode}, {order.shippingAddress.country}
             </p>
             {order.isDelivered ? <p>Delivered on {order.deliveredAt}</p> : <p>Not Delivered</p>}
@@ -112,7 +168,32 @@ function OrderScreen() {
               <span>${order.totalPrice}</span>
             </div>
 
-            {/* PAY ORDER PLACEHOLDER */}
+            {!order.isPaid && (
+              <div className="order-pay-section">
+                {loadingPay && <p>Processing payment...</p>}
+
+                {isPending ? (
+                  <p>Loading PayPal...</p>
+                ) : (
+                  <div>
+                    <button
+                      className="btn-block"
+                      style={{ marginBottom: "10px" }}
+                      onClick={onApproveTest}
+                    >
+                      Test Pay Order
+                    </button>
+                    <div>
+                      <PayPalButtons
+                        createOrder={createOrder}
+                        onApprove={onApprove}
+                        onError={onError}
+                      ></PayPalButtons>
+                    </div>
+                  </div>
+                )}
+              </div>
+            )}
             {/* MARK AS DELIVERED PLACEHOLDER */}
           </div>
         </div>
