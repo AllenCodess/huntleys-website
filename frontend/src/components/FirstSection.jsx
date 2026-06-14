@@ -25,7 +25,7 @@ const FirstSection = () => {
             <p className="section-description">
               Sign in to your account to track orders, save favorites, and more.
             </p>
-            <Link to={"/signin"}>
+            <Link to={"/login"}>
               <button className="section-btn">SIGN IN</button>
             </Link>
           </div>
