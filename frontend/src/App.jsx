@@ -16,6 +16,7 @@ import PrivateRoute from "./components/PrivateRoutes";
 import PaymentScreen from "./Screens/PaymentScreen";
 import PlaceOrderScreen from "./Screens/PlaceOrderScreen";
 import OrderScreen from "./Screens/OrderScreen";
+import ProfileScreen from "./screens/ProfileScreen";
 import "react-toastify/dist/ReactToastify.css";
 
 const App = () => {
@@ -39,6 +40,7 @@ const App = () => {
             <Route path="/payment" element={<PaymentScreen />}></Route>
             <Route path="/placeorder" element={<PlaceOrderScreen />} />
             <Route path="/order/:id" element={<OrderScreen />} />
+            <Route path="/profile" element={<ProfileScreen />} />
           </Route>
         </Routes>
       </BrowserRouter>
