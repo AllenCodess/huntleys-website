@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
 import { useProfileMutation } from "../slices/usersApiSlice";
 import { setCredentials } from "../slices/authSlice";
+import Header from "../components/Header";
 
 function ProfileScreen() {
   const [formData, setFormData] = useState({
@@ -15,6 +16,10 @@ function ProfileScreen() {
   const { userInfo } = useSelector(function (state) {
     return state.auth;
   });
+
+  const [updateProfile, { isLoading: loadingUpdateProfile }] = useProfileMutation();
+
+  const dispatch = useDispatch();
 
   useEffect(
     function () {
@@ -29,58 +34,78 @@ function ProfileScreen() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   }
 
-  async function submitHandler(e) {
+  const submitHandler = async (e) => {
     e.preventDefault();
-    console.log("submit");
-  }
+    if (formData.password !== formData.confirmPassword) {
+      toast.error("Passwords do not match");
+    } else {
+      try {
+        const res = await updateProfile({
+          _id: userInfo._id,
+          name: formData.name,
+          email: formData.email,
+          password: formData.password,
+        }).unwrap();
+
+        dispatch(setCredentials({ ...res }));
+        toast.success("Profile updated successfully");
+      } catch (err) {
+        toast.error(err?.data?.message || err.error);
+      }
+    }
+  };
 
   return (
-    <div className="profile-container">
-      <div className="profile-left">
-        <h2>User Profile</h2>
-        <form onSubmit={submitHandler}>
-          <input
-            className="profile-inputs"
-            type="text"
-            name="name"
-            placeholder="Enter name"
-            value={formData.name}
-            onChange={handleChange}
-          />
-          <input
-            className="profile-inputs"
-            type="email"
-            name="email"
-            placeholder="Enter email"
-            value={formData.email}
-            onChange={handleChange}
-          />
-          <input
-            className="profile-inputs"
-            type="password"
-            name="password"
-            placeholder="Enter password"
-            value={formData.password}
-            onChange={handleChange}
-          />
-          <input
-            className="profile-inputs"
-            type="password"
-            name="confirmPassword"
-            placeholder="Confirm password"
-            value={formData.confirmPassword}
-            onChange={handleChange}
-          />
-          <button type="submit" className="profile-btn">
-            Update
-          </button>
-        </form>
-      </div>
+    <>
+      <Header />
+      <div className="profile-container">
+        <div className="profile-left">
+          <h2>User Profile</h2>
+          <form onSubmit={submitHandler}>
+            <input
+              className="profile-inputs"
+              type="text"
+              name="name"
+              placeholder="Enter name"
+              value={formData.name}
+              onChange={handleChange}
+            />
+            <input
+              className="profile-inputs"
+              type="email"
+              name="email"
+              placeholder="Enter email"
+              value={formData.email}
+              onChange={handleChange}
+            />
+            <input
+              className="profile-inputs"
+              type="password"
+              name="password"
+              placeholder="Enter password"
+              value={formData.password}
+              onChange={handleChange}
+            />
+            <input
+              className="profile-inputs"
+              type="password"
+              name="confirmPassword"
+              placeholder="Confirm password"
+              value={formData.confirmPassword}
+              onChange={handleChange}
+            />
+            <button type="submit" className="profile-btn">
+              Update
+            </button>
+            {loadingUpdateProfile && <p>Updating...</p>}
+          </form>
+        </div>
 
-      <div className="profile-right">
-        <h2>My Orders</h2>
+        <div className="profile-right">
+          <h2>My Orders</h2>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 
