@@ -16,7 +16,7 @@ import PrivateRoute from "./components/PrivateRoutes";
 import PaymentScreen from "./Screens/PaymentScreen";
 import PlaceOrderScreen from "./Screens/PlaceOrderScreen";
 import OrderScreen from "./Screens/OrderScreen";
-import ProfileScreen from "./screens/ProfileScreen";
+import ProfileScreen from "./Screens/ProfileScreen";
 import "react-toastify/dist/ReactToastify.css";
 
 const App = () => {
