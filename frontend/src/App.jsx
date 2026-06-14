@@ -17,6 +17,8 @@ import PaymentScreen from "./Screens/PaymentScreen";
 import PlaceOrderScreen from "./Screens/PlaceOrderScreen";
 import OrderScreen from "./Screens/OrderScreen";
 import ProfileScreen from "./Screens/ProfileScreen";
+import AdminRoute from "./components/AdminRoute";
+import OrderListScreen from "./Screens/admin/OrderListScreen";
 import "react-toastify/dist/ReactToastify.css";
 
 const App = () => {
@@ -42,6 +44,11 @@ const App = () => {
             <Route path="/order/:id" element={<OrderScreen />} />
             <Route path="/profile" element={<ProfileScreen />} />
           </Route>
+          {/* Admin Routes */}
+          <Route path="" element={<AdminRoute />}>
+            <Route path="/admin/orderlist" element={<OrderListScreen />} />
+          </Route>
+          ;
         </Routes>
       </BrowserRouter>
     </>

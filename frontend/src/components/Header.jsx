@@ -11,6 +11,7 @@ import { useSelector, useDispatch } from "react-redux";
 function Header() {
   const [isOpen, setOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [adminDropdownOpen, setAdminDropdownOpen] = useState(false);
   const { cartItems } = useSelector((state) => state.cart);
   const { userInfo } = useSelector((state) => state.auth);
 
@@ -80,6 +81,28 @@ function Header() {
               <Link className="navIconText" to="/login">
                 LOGIN <FontAwesomeIcon className="nav-icon" icon={faUser} size="s" />
               </Link>
+            )}
+            {userInfo && userInfo.isAdmin && (
+              <div className="user-dropdown">
+                <button
+                  className="navIconText user-dropdown-btn"
+                  onClick={() => setAdminDropdownOpen(!adminDropdownOpen)}
+                >
+                  ADMIN
+                  <FontAwesomeIcon className="nav-icon" icon={faChevronDown} size="xs" />
+                </button>
+                {adminDropdownOpen && (
+                  <div className="dropdown-menu">
+                    <Link
+                      className="dropdown-item"
+                      to="/admin/orderlist"
+                      onClick={() => setAdminDropdownOpen(false)}
+                    >
+                      Orders
+                    </Link>
+                  </div>
+                )}
+              </div>
             )}
             <Link className="navIconText" to="/cart">
               CART
