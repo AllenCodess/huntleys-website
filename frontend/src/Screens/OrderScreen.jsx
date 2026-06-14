@@ -8,6 +8,7 @@ import {
   useGetOrderDetailsQuery,
   usePayOrderMutation,
   useGetPaypalClientIdQuery,
+  useDeliverOrderMutation,
 } from "../slices/ordersApiSlice";
 
 function OrderScreen() {
@@ -19,12 +20,18 @@ function OrderScreen() {
   const { userInfo } = useSelector((state) => state.auth);
 
   const [{ isPending }, paypalDispatch] = usePayPalScriptReducer();
+  const [deliverOrder, { isLoading: loadingDeliver }] = useDeliverOrderMutation();
 
   const {
     data: paypal,
     isLoading: loadingPayPal,
     error: errorPayPal,
   } = useGetPaypalClientIdQuery();
+
+  const deliverHandler = async () => {
+    await deliverOrder(orderId);
+    refetch();
+  };
 
   useEffect(() => {
     if (!errorPayPal && !loadingPayPal && paypal && paypal.clientId) {
@@ -194,7 +201,15 @@ function OrderScreen() {
                 )}
               </div>
             )}
-            {/* MARK AS DELIVERED PLACEHOLDER */}
+            {loadingDeliver && <p>Updating...</p>}
+
+            {userInfo && userInfo.isAdmin && order.isPaid && !order.isDelivered && (
+              <div className="order-deliver-section">
+                <button type="button" className="btn-block" onClick={deliverHandler}>
+                  Mark As Delivered
+                </button>
+              </div>
+            )}
           </div>
         </div>
       </div>
