@@ -3,7 +3,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEdit, faPlus, faTrash } from "@fortawesome/free-solid-svg-icons";
 import Header from "../../components/Header";
 import { toast } from "react-toastify";
-import { useGetProductsQuery, useCreateProductMutation } from "../../slices/productApiSlice";
+import {
+  useGetProductsQuery,
+  useDeleteProductMutation,
+  useCreateProductMutation,
+} from "../../slices/productApiSlice";
 
 function ProductListScreen() {
   const { data: products, isLoading, error, refetch } = useGetProductsQuery();
@@ -21,8 +25,17 @@ function ProductListScreen() {
     }
   };
 
-  const deleteHandler = (id) => {
-    console.log("delete", id);
+  const [deleteProduct, { isLoading: loadingDelete }] = useDeleteProductMutation();
+
+  const deleteHandler = async (id) => {
+    if (window.confirm("Are you sure")) {
+      try {
+        await deleteProduct(id);
+        refetch();
+      } catch (err) {
+        toast.error(err?.data?.message || err.error);
+      }
+    }
   };
 
   return (
@@ -37,6 +50,7 @@ function ProductListScreen() {
         </div>
 
         {loadingCreate && <p>Creating...</p>}
+        {loadingDelete && <p>Deleting...</p>}
 
         {isLoading ? (
           <p>Loading...</p>
