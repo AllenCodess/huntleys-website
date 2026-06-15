@@ -1453,6 +1453,58 @@ label {
 .orderlist-container {
   background-color: white;
 }
+
+/* Product List Screen (Admin) */
+
+.productlist-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  margin-top: 2rem;
+  padding: 2rem;
+  background-color: white;
+}
+
+.productlist-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.productlist-header {
+  color: #0e2a4e;
+  font-family: "Stack Sans Headline", sans-serif;
+}
+
+.productlist-create-btn {
+  background-color: #0e2a4e;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: "Stack Sans Headline", sans-serif;
+  font-size: 14px;
+}
+
+.product-edit-btn {
+  background-color: #f4efe8;
+  color: #0e2a4e;
+  border: 1px solid #ffc04b;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-right: 0.5rem;
+}
+
+.product-delete-btn {
+  background-color: #c63a32;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
 /* Footer */
 
 .footer-container {

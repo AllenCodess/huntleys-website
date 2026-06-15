@@ -95,6 +95,13 @@ function Header() {
                   <div className="dropdown-menu">
                     <Link
                       className="dropdown-item"
+                      to="/admin/productlist"
+                      onClick={() => setAdminDropdownOpen(false)}
+                    >
+                      Products
+                    </Link>
+                    <Link
+                      className="dropdown-item"
                       to="/admin/orderlist"
                       onClick={() => setAdminDropdownOpen(false)}
                     >
