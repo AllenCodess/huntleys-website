@@ -1488,9 +1488,9 @@ label {
 }
 
 .product-edit-btn {
-  background-color: #f4efe8;
+  background-color: green;
   color: #0e2a4e;
-  border: 1px solid #ffc04b;
+  border: 1px solid black;
   padding: 0.4rem 0.6rem;
   border-radius: 6px;
   cursor: pointer;
