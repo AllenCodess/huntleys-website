@@ -1610,6 +1610,80 @@ label {
   color: #c63a32;
   border: 1px solid #c63a32;
 }
+
+/* User List Screen (Admin) */
+
+.userlist-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  margin-top: 2rem;
+  padding: 2rem;
+  background-color: white;
+}
+
+.userlist-container h1 {
+  color: #0e2a4e;
+  font-family: "Stack Sans Headline", sans-serif;
+  margin-bottom: 1.5rem;
+}
+
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "Stack Sans Headline", sans-serif;
+  color: #0e2a4e;
+  font-size: 13px;
+}
+
+.users-table th {
+  text-align: left;
+  padding: 0.7rem 0.5rem;
+  border-bottom: 2px solid #0e2a4e;
+  font-size: 12px;
+  letter-spacing: 0.05rem;
+}
+
+.users-table td {
+  padding: 0.7rem 0.5rem;
+  border-bottom: 1px solid #f4efe8;
+  vertical-align: middle;
+}
+
+.users-table tbody tr:hover {
+  background-color: #f4efe8;
+}
+
+.users-table a {
+  color: #c63a32;
+  text-decoration: none;
+}
+
+.users-table a:hover {
+  text-decoration: underline;
+}
+
+.user-edit-btn {
+  display: inline-block;
+  background-color: #f4efe8;
+  color: #0e2a4e;
+  background-color: green;
+  border: 1px solid black;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  text-decoration: none;
+}
+
+.user-delete-btn {
+  background-color: #c63a32;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
 /* Footer */
 
 .footer-container {

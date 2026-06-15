@@ -107,6 +107,13 @@ function Header() {
                     >
                       Orders
                     </Link>
+                    <Link
+                      className="dropdown-item"
+                      to="/admin/userlist"
+                      onClick={() => setAdminDropdownOpen(false)}
+                    >
+                      Users
+                    </Link>
                   </div>
                 )}
               </div>
