@@ -20,6 +20,7 @@ import ProfileScreen from "./Screens/ProfileScreen";
 import AdminRoute from "./components/AdminRoute";
 import OrderListScreen from "./Screens/admin/OrderListScreen";
 import ProductListScreen from "./Screens/admin/ProductListScreen";
+import ProductEditScreen from "./Screens/admin/ProductEditScreen";
 import "react-toastify/dist/ReactToastify.css";
 
 const App = () => {
@@ -49,6 +50,7 @@ const App = () => {
           <Route path="" element={<AdminRoute />}>
             <Route path="/admin/orderlist" element={<OrderListScreen />} />
             <Route path="/admin/productlist" element={<ProductListScreen />} />
+            <Route path="/admin/product/:id/edit" element={<ProductEditScreen />} />
           </Route>
           ;
         </Routes>

@@ -1505,6 +1505,111 @@ label {
   border-radius: 6px;
   cursor: pointer;
 }
+
+/* Product Edit Screen (Admin) */
+
+.product-edit-container {
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 2rem;
+  padding: 2rem;
+  background-color: white;
+}
+
+.product-edit-container h1 {
+  color: #0e2a4e;
+  font-family: "Stack Sans Headline", sans-serif;
+  margin-bottom: 1.5rem;
+}
+
+.btn-go-back {
+  display: inline-block;
+  background-color: #f4efe8;
+  color: #0e2a4e;
+  border: 1px solid #ffc04b;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-family: "Stack Sans Headline", sans-serif;
+  font-size: 14px;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.btn-go-back:hover {
+  background-color: #ffc04b;
+}
+
+/* form fields */
+
+.form-group {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.form-group label {
+  display: block; /* overrides the global label { display: none } */
+  color: #0e2a4e;
+  font-family: "Stack Sans Headline", sans-serif;
+  font-size: 14px;
+  margin-bottom: 0.3rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  font-size: 16px; /* overrides the global 10px */
+  padding: 0.6rem;
+  border: 1px solid lightgrey;
+  border-radius: 4px;
+  font-family: "Stack Sans Headline", sans-serif;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+.btn-update {
+  background-color: #05b9f5;
+  color: white;
+  width: 150px;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 8px;
+  font-family: "Stack Sans Headline", sans-serif;
+  font-size: 14px;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.btn-update:hover {
+  background-color: #0497ca;
+}
+
+/* loader + error message (reused across screens) */
+
+.loader {
+  color: #0e2a4e;
+  font-family: "Stack Sans Headline", sans-serif;
+  font-size: 16px;
+  margin: 1rem 0;
+}
+
+.message {
+  padding: 0.8rem 1rem;
+  border-radius: 6px;
+  font-family: "Stack Sans Headline", sans-serif;
+  font-size: 14px;
+  margin: 1rem 0;
+}
+
+.message-danger {
+  background-color: #fdecea;
+  color: #c63a32;
+  border: 1px solid #c63a32;
+}
 /* Footer */
 
 .footer-container {
