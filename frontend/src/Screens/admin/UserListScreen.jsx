@@ -2,13 +2,22 @@ import { Link } from "react-router";
 import Header from "../../components/Header";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faEdit, faCheck, faTimes } from "@fortawesome/free-solid-svg-icons";
-import { useGetUsersQuery } from "../../slices/usersApiSlice";
+import { useGetUsersQuery, useDeleteUserMutation } from "../../slices/usersApiSlice";
 
 const UserListScreen = () => {
   const { data: users, refetch, isLoading, error } = useGetUsersQuery();
 
+  const [deleteUser] = useDeleteUserMutation();
+
   const deleteHandler = async (id) => {
-    console.log("delete");
+    if (window.confirm("Are you sure")) {
+      try {
+        await deleteUser(id);
+        refetch();
+      } catch (err) {
+        toast.error(err?.data?.message || err.error);
+      }
+    }
   };
 
   return (

@@ -1684,6 +1684,26 @@ label {
   cursor: pointer;
 }
 
+.form-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.form-checkbox input {
+  width: auto;
+}
+
+.form-checkbox label {
+  display: block;
+  margin-bottom: 0;
+  white-space: nowrap;
+}
+
+.admin-label {
+  width: 70px;
+}
+
 /* Footer */
 
 .footer-container {
