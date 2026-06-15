@@ -4,6 +4,7 @@ import { toast } from "react-toastify";
 import {
   useGetProductDetailsQuery,
   useUpdateProductMutation,
+  useUploadProductImageMutation,
 } from "../../slices/productApiSlice.js";
 
 const ProductEditScreen = () => {
@@ -18,6 +19,8 @@ const ProductEditScreen = () => {
   const { data: product, isLoading, refetch, error } = useGetProductDetailsQuery(productId);
 
   const [updateProduct, { isLoading: loadingUpdate }] = useUpdateProductMutation();
+
+  const [uploadProductImage, { isLoading: loadingUpload }] = useUploadProductImageMutation();
 
   const navigate = useNavigate();
 
@@ -49,6 +52,18 @@ const ProductEditScreen = () => {
       setDescription(product.description);
     }
   }, [product]);
+
+  const uploadFileHandler = async (e) => {
+    const formData = new FormData();
+    formData.append("image", e.target.files[0]);
+    try {
+      const res = await uploadProductImage(formData).unwrap();
+      toast.success(res.message);
+      setImage(res.image);
+    } catch (err) {
+      toast.error(err?.data?.message || err.error);
+    }
+  };
 
   return (
     <div className="product-edit-container">
@@ -86,7 +101,18 @@ const ProductEditScreen = () => {
             />
           </div>
 
-          {/* IMAGE INPUT PLACEHOLDER */}
+          <div className="form-group">
+            <label htmlFor="image">Image</label>
+            <input
+              id="image"
+              type="text"
+              placeholder="Enter image url"
+              value={image}
+              onChange={(e) => setImage(e.target.value)}
+            />
+            <input id="image-file" type="file" onChange={uploadFileHandler} />
+            {loadingUpload && <div className="loader">Loading...</div>}
+          </div>
 
           <div className="form-group">
             <label htmlFor="countInStock">Count In Stock</label>
