@@ -4,7 +4,7 @@ import { faUser, faCartShopping, faChevronDown } from "@fortawesome/free-solid-s
 import Hamburger from "hamburger-react";
 import { useState } from "react";
 import { useLogoutMutation } from "../slices/usersApiSlice";
-import { logout } from "../slices/authslice.js";
+import { logout } from "../slices/authSlice.js";
 import { useNavigate, Link } from "react-router";
 import { useSelector, useDispatch } from "react-redux";
 
