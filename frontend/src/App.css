@@ -940,7 +940,7 @@ label {
 .login-form-container {
   border: solid rgb(207, 207, 207) 1px;
   border-radius: 8px;
-  width: 40%;
+  width: 50%;
   margin: 0 auto;
   margin-top: 7rem;
   text-align: center;
@@ -2055,6 +2055,22 @@ label {
 
   .profile-inputs {
     width: 100%;
+  }
+
+  .login-form-container {
+    width: 90%;
+  }
+
+  .register-form-container {
+    width: 80%;
+  }
+
+  .register-inputs {
+    width: 70%;
+  }
+
+  .login-inputs {
+    width: 70%;
   }
 }
 
