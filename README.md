@@ -6,7 +6,7 @@
 
 ## Screenshot
 
-![Screenshot](frontend/public/images/homeherov2.png)
+![Screenshot](frontend/public/images/readmeimg.png)
 
 ## Overview
 
