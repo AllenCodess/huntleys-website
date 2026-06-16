@@ -1,16 +1,40 @@
-# React + Vite
+# Huntley's Sauces
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Status:** Live
 
-Currently, two official plugins are available:
+[Website](https://huntleysauce.com)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Screenshot
 
-## React Compiler
+![Screenshot](frontend/public/images/homeherov2.png)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Overview
 
-## Expanding the ESLint configuration
+A full-stack MERN e-commerce site built for Huntley's Sauces, a condiment business based in Maryland. Customers can browse the sauce collection, view product details, add items to a cart, register and log in, and complete checkout with real payments through PayPal. The site includes a full admin dashboard for managing products, orders, and users, plus a contact form that emails the business directly.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Features
+
+- Browse products and view individual product details
+- Persistent shopping cart with quantity selection
+- User registration and login with JWT authentication (HTTP-only cookies)
+- Multi-step checkout: shipping, payment method, place order
+- Live PayPal and credit/debit card payments
+- Order history and user profile
+- Admin dashboard: create/edit/delete products, manage users, mark orders delivered
+- Product image uploads via Cloudinary
+- Contact form with email delivery to the business
+- Responsive design for mobile and desktop
+
+## Technologies Used
+
+- React
+- React Router
+- Redux Toolkit + RTK Query
+- Node.js / Express
+- MongoDB / Mongoose
+- JWT authentication
+- PayPal API
+- Cloudinary (image hosting)
+- Resend (transactional email)
+- CSS
+- Vite
