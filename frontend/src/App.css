@@ -2076,6 +2076,13 @@ label {
   .login-inputs {
     width: 70%;
   }
+  .placeorder-summary {
+    overflow: visible;
+  }
+  .btn-block {
+    display: block;
+    width: 100%;
+  }
 }
 
 @media (max-width: 664px) {
