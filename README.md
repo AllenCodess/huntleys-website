@@ -10,7 +10,7 @@
 
 ## Overview
 
-A full-stack MERN e-commerce site built for Huntley's Sauces, a condiment business based in Maryland. Customers can browse the sauce collection, view product details, add items to a cart, register and log in, and complete checkout with real payments through PayPal. The site includes a full admin dashboard for managing products, orders, and users, plus a contact form that emails the business directly.
+A full-stack MERN e-commerce application built and deployed as a client project for Huntley's Sauces, a condiment business based in Maryland. The site handles the complete purchase flow — browsing products, managing a persistent cart, user authentication, multi-step checkout, and live payment processing through PayPal. It also includes a role-protected admin dashboard for managing products, orders, and users, plus a contact form integrated with a transactional email service. Built with a custom CSS design system (no UI framework), secure JWT authentication via HTTP-only cookies, and cloud-based image hosting.
 
 ## Features
 
