@@ -1968,6 +1968,10 @@ label {
     width: 60%;
   }
 
+  .collection-price {
+    margin-top: 1.3rem;
+  }
+
   .section-btn {
     margin-top: 0.8rem;
     color: black;
