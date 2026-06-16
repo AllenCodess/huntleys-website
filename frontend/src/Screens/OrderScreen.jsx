@@ -48,6 +48,7 @@ function OrderScreen() {
           value: {
             "client-id": paypal.clientId,
             currency: "USD",
+            "disable-funding": "paylater",
           },
         });
         paypalDispatch({ type: "setLoadingStatus", value: "pending" });
@@ -70,12 +71,6 @@ function OrderScreen() {
         toast.error(err?.data?.message || err.error);
       }
     });
-  }
-
-  async function onApproveTest() {
-    await payOrder({ orderId, details: { payer: {} } });
-    refetch();
-    toast.success("Order is paid");
   }
 
   function onError(err) {
@@ -194,20 +189,11 @@ function OrderScreen() {
                   <p>Loading PayPal...</p>
                 ) : (
                   <div>
-                    <button
-                      className="btn-block"
-                      style={{ marginBottom: "10px" }}
-                      onClick={onApproveTest}
-                    >
-                      Test Pay Order
-                    </button>
-                    <div>
-                      <PayPalButtons
-                        createOrder={createOrder}
-                        onApprove={onApprove}
-                        onError={onError}
-                      ></PayPalButtons>
-                    </div>
+                    <PayPalButtons
+                      createOrder={createOrder}
+                      onApprove={onApprove}
+                      onError={onError}
+                    ></PayPalButtons>
                   </div>
                 )}
               </div>
