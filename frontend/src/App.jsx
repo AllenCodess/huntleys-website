@@ -21,8 +21,8 @@ import AdminRoute from "./components/AdminRoute";
 import OrderListScreen from "./Screens/admin/OrderListScreen";
 import ProductListScreen from "./Screens/admin/ProductListScreen";
 import ProductEditScreen from "./Screens/admin/ProductEditScreen";
-import UserListScreen from "./screens/admin/UserListScreen";
-import UserEditScreen from "./screens/admin/UserEditScreen";
+import UserListScreen from "./Screens/admin/UserListScreen";
+import UserEditScreen from "./Screens/admin/UserEditScreen";
 import "react-toastify/dist/ReactToastify.css";
 
 const App = () => {
