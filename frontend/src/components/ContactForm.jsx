@@ -2,6 +2,7 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
+import { toast } from "react-toastify";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -17,9 +18,37 @@ const ContactForm = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: `${formData.firstname} ${formData.lastname}`,
+          email: formData.email,
+          phoneNumber: formData.phoneNumber,
+          subject: formData.subject,
+          message: formData.message,
+        }),
+      });
+
+      if (!res.ok) {
+        throw new Error("Failed to send");
+      }
+
+      toast.success("Message sent! We'll be in touch soon.");
+      setFormData({
+        firstname: "",
+        lastname: "",
+        phoneNumber: "",
+        subject: "",
+        email: "",
+        message: "",
+      });
+    } catch (err) {
+      toast.error("Something went wrong. Please try again.");
+    }
   };
 
   return (

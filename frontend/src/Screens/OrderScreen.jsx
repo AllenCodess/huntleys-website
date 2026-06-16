@@ -28,6 +28,13 @@ function OrderScreen() {
     error: errorPayPal,
   } = useGetPaypalClientIdQuery();
 
+  const formatDate = (dateString) =>
+    new Date(dateString).toLocaleString("en-US", {
+      timeZone: "America/New_York",
+      dateStyle: "medium",
+      timeStyle: "short",
+    });
+
   const deliverHandler = async () => {
     await deliverOrder(orderId);
     refetch();
@@ -117,7 +124,11 @@ function OrderScreen() {
               {order.shippingAddress.address}, {order.shippingAddress.city},{" "}
               {order.shippingAddress.postalCode}, {order.shippingAddress.country}
             </p>
-            {order.isDelivered ? <p>Delivered on {order.deliveredAt}</p> : <p>Not Delivered</p>}
+            {order.isDelivered ? (
+              <p>Delivered on {formatDate(order.deliveredAt)}</p>
+            ) : (
+              <p>Not Delivered</p>
+            )}
           </div>
 
           <div className="order-section">
@@ -126,7 +137,7 @@ function OrderScreen() {
               <strong>Method: </strong>
               {order.paymentMethod}
             </p>
-            {order.isPaid ? <p>Paid on {order.paidAt}</p> : <p>Not Paid</p>}
+            {order.isPaid ? <p>Paid on {formatDate(order.paidAt)}</p> : <p>Not Paid</p>}
           </div>
 
           <div className="order-section">

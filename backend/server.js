@@ -8,6 +8,7 @@ import uploadRoutes from "./routes/uploadRoutes.js";
 import path from "path";
 import { notFound, errorHandler } from "./middleware/errorMiddleware.js";
 import cookieParser from "cookie-parser";
+import contactRoutes from "./routes/contactRoutes.js";
 
 dotenv.config();
 connectDB();
@@ -27,6 +28,7 @@ app.use("/api/products", productRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/orders", orderRoutes);
 app.use("/api/upload", uploadRoutes);
+app.use("/api/contact", contactRoutes);
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "/frontend/build")));
