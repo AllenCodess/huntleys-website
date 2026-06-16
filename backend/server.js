@@ -30,6 +30,8 @@ app.use("/api/orders", orderRoutes);
 app.use("/api/upload", uploadRoutes);
 app.use("/api/contact", contactRoutes);
 
+app.get("/api/config/paypal", (req, res) => res.send({ clientId: process.env.PAYPAL_CLIENT_ID }));
+
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "/frontend/build")));
 
@@ -41,8 +43,6 @@ if (process.env.NODE_ENV === "production") {
     res.send("API is running....");
   });
 }
-
-app.get("/api/config/paypal", (req, res) => res.send({ clientId: process.env.PAYPAL_CLIENT_ID }));
 
 app.use(notFound);
 app.use(errorHandler);
